@@ -21,14 +21,20 @@ module.exports = {
         name: `fcgec-webapp`,
         short_name: `fcgec-webapp`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#070813`,
+        theme_color: `#070813`,
+        display: `standalone`,
+        icon: `src/images/FCGEC.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: `@import "${__dirname}/src/styles/variables";`,
+      }
+    }
   ],
 }
