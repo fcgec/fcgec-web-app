@@ -7,8 +7,9 @@ import SEO from "../components/seo"
 const AboutPage = () => (
     <Layout>
         <SEO title="About" />
+        <h2>WHAT IS FOSS COMMUNITY GEC?</h2>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam doloremque veniam quibusdam aperiam minima recusandae voluptate! Suscipit cum eaque veniam repudiandae adipisci, eum reprehenderit hic. Deserunt libero repellendus dolorem voluptatibus.
+            FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community in Goa College of Engineering and encourage students across Goa to contribute to open source software projects and adopt the FOSS philosophy.
         </p>
     </Layout>
 )

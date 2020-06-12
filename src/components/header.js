@@ -9,7 +9,7 @@ import headerStyles from './header.module.scss'
 const Header = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "FCGEC.png" }) {
+      file(relativePath: { eq: "FCGEC.png" }) {
         childImageSharp {
           fluid(maxHeight: 120) {
             ...GatsbyImageSharpFluid
@@ -24,14 +24,19 @@ const Header = ({ siteTitle }) => {
       <div>
         <h1>
           <Link to="/">
-            <Img fluid={data.placeholderImage.childImageSharp.fluid}
+            <Img fluid={data.file.childImageSharp.fluid}
               imgStyle={{ objectFit: 'contain' }}
               alt="Logo" />
             <p>{siteTitle}</p>
           </Link>
         </h1>
       </div>
-
+      <ul>
+        <Link to="/"><li>Home</li></Link>
+        <Link to="/events"><li>Events</li></Link>
+        <Link to="/about"><li>About</li></Link>
+        <Link to="/contact"><li>Contact</li></Link>
+      </ul>
     </header>
   )
 }
