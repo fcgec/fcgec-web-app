@@ -7,11 +7,22 @@
 
 .content {
   flex-grow: 1;
-  background: $primary-bg;
-  color: $primary-text;
 
-  main {
-    max-width: 960px;
-    margin: 0 auto;
+  .main {
+    position: relative;
+    top: 0;
+    margin-left: 200px;
+    height: 100%;
+    padding: 2rem;
+    color: $primary-text;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    padding-bottom: 50px;
+    .main {
+      margin-left: 0;
+    }
   }
 }

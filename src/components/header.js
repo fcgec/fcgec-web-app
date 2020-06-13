@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
     query {
       file(relativePath: { eq: "FCGEC.png" }) {
         childImageSharp {
-          fluid(maxHeight: 120) {
+          fluid(maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
