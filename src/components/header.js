@@ -6,18 +6,20 @@ import Img from "gatsby-image"
 
 import headerStyles from './header.module.scss'
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, location }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "FCGEC.png" }) {
         childImageSharp {
-          fluid(maxHeight: 300) {
+          fluid(maxHeight: 150) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+
+  const activeLinkStyles = { color: "#32e0c4", paddingLeft: "0.75rem", borderLeft: "0.25rem solid #32e0c4" };
 
   return (
     <header className={headerStyles.header}>
@@ -27,15 +29,20 @@ const Header = ({ siteTitle }) => {
             <Img fluid={data.file.childImageSharp.fluid}
               imgStyle={{ objectFit: 'contain' }}
               alt="Logo" />
-            <p>{siteTitle}</p>
+            <p>
+              {/* {siteTitle} */}
+              FC GEC
+            </p>
           </Link>
         </h1>
       </div>
       <ul>
-        <Link to="/"><li>Home</li></Link>
-        <Link to="/events"><li>Events</li></Link>
-        <Link to="/about"><li>About</li></Link>
-        <Link to="/contact"><li>Contact</li></Link>
+        <li><Link activeStyle={activeLinkStyles} to="/">Home</Link></li>
+        <li><Link activeStyle={activeLinkStyles} to="/events">Events</Link></li>
+        <li><Link activeStyle={activeLinkStyles} to="/about">About</Link></li>
+        <li><Link activeStyle={activeLinkStyles} to="/members">Members</Link></li>
+        <li><Link activeStyle={activeLinkStyles} to="/projects">Projects</Link></li>
+        <li><Link activeStyle={activeLinkStyles} to="/blog">Blog</Link></li>
       </ul>
     </header>
   )
