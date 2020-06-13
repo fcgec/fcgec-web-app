@@ -6,6 +6,13 @@ import Img from "gatsby-image"
 
 import headerStyles from './header.module.scss'
 
+import HomeIcon from '../images/home.svg'
+import AboutIcon from '../images/about.svg'
+import MembersIcon from '../images/members.svg'
+import ProjectsIcon from '../images/projects.svg'
+import BlogIcon from '../images/blog.svg'
+import EventsIcon from '../images/events.svg'
+
 const Header = ({ siteTitle, location }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -19,7 +26,7 @@ const Header = ({ siteTitle, location }) => {
     }
   `)
 
-  const activeLinkStyles = { color: "#32e0c4", paddingLeft: "0.75rem", borderLeft: "0.25rem solid #32e0c4" };
+  const activeLinkStyles = { color: "#0069ff", borderLeft: "0.25rem solid #0069ff" };
 
   return (
     <header className={headerStyles.header}>
@@ -37,12 +44,36 @@ const Header = ({ siteTitle, location }) => {
         </h1>
       </div>
       <ul>
-        <li><Link activeStyle={activeLinkStyles} to="/">Home</Link></li>
-        <li><Link activeStyle={activeLinkStyles} to="/events">Events</Link></li>
-        <li><Link activeStyle={activeLinkStyles} to="/about">About</Link></li>
-        <li><Link activeStyle={activeLinkStyles} to="/members">Members</Link></li>
-        <li><Link activeStyle={activeLinkStyles} to="/projects">Projects</Link></li>
-        <li><Link activeStyle={activeLinkStyles} to="/blog">Blog</Link></li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/">
+            <img src={HomeIcon} className={headerStyles.svgColor} alt="Icon" /> <p>Home</p>
+          </Link>
+        </li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/events">
+            <img src={EventsIcon} className={headerStyles.svgColor} alt="Icon" /> <p>Events</p>
+          </Link>
+        </li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/about">
+            <img src={AboutIcon} className={headerStyles.svgColor} alt="Icon" /> <p>About</p>
+          </Link>
+        </li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/members">
+            <img src={MembersIcon} className={headerStyles.svgColor} alt="Icon" /> <p>Members</p>
+          </Link>
+        </li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/projects">
+            <img src={ProjectsIcon} className={headerStyles.svgColor} alt="Icon" /> <p>Projects</p>
+          </Link>
+        </li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/blog">
+            <img src={BlogIcon} className={headerStyles.svgColor} alt="Icon" /> <p>Blog</p>
+          </Link>
+        </li>
       </ul>
     </header>
   )

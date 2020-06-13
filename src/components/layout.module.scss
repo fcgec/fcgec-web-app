@@ -11,10 +11,11 @@
   .main {
     position: relative;
     top: 0;
-    margin-left: 150px;
+    margin-left: 175px;
     height: 100%;
-    padding: 2rem;
+    // padding: 2rem;
     color: $primary-text;
+    z-index: 1;
   }
 }
 
