@@ -1,8 +1,5 @@
 .header {
   background: $secondary-bg;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-around;
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
   width: 175px;
   left: 0;
@@ -11,7 +8,6 @@
   z-index: 5;
 
   div {
-    // max-width: 1080px;
     margin: 0 auto;
 
     h1 {
@@ -33,6 +29,7 @@
       p {
         font-size: 1.65rem;
         text-align: center;
+        padding-bottom: 0.75rem;
       }
 
       &:hover {

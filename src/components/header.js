@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { useMedia } from 'react-media';
 
 import headerStyles from './header.module.scss'
 
@@ -26,13 +27,19 @@ const Header = ({ siteTitle, location }) => {
     }
   `)
 
+  const GLOBAL_MEDIA_QUERIES = {
+    small: "(max-width: 768px)",
+    large: "(min-width: 769px)"
+  };
+
+  const matches = useMedia({ queries: GLOBAL_MEDIA_QUERIES });
+
   const activeLinkStyles = { color: "#0069ff" };
 
-  // Style for active link to 
-  if (window.innerWidth <= 768)
-    activeLinkStyles.borderTop = "0.25rem solid #0069ff"
+  if (matches.small)
+    activeLinkStyles.borderTop = "0.25rem solid #0069ff";
   else
-    activeLinkStyles.borderLeft = "0.25rem solid #0069ff"
+    activeLinkStyles.borderLeft = "0.25rem solid #0069ff";
 
   return (
     <header className={headerStyles.header}>
