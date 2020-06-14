@@ -28,12 +28,19 @@
 }
 
 .imageWithText {
-  background: #fff;
-  color: #212121;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  padding: 1.5rem 0;
+  padding: 1.5rem;
+
+  .image {
+    overflow: hidden;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
 
   .text {
     margin: 0 auto;
