@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-// import BlogStyles from './blog.module.scss'
+import BlogStyles from './blog.module.scss'
 
 const BlogPage = () => {
 
@@ -17,6 +17,9 @@ const BlogPage = () => {
                             title
                             date
                             author
+                        }
+                        fields {
+                            slug
                         }
                     }
                 }
@@ -33,17 +36,19 @@ const BlogPage = () => {
             </section>
 
             <div className="container">
-                <ol>
+                <div className={BlogStyles.postGrid}>
                     {data.allMarkdownRemark.edges.map(edge => {
                         return (
-                            <li>
-                                <h3>{edge.node.frontmatter.title}</h3>
-                                <p>{edge.node.frontmatter.date}</p>
-                                <p>- {edge.node.frontmatter.author}</p>
-                            </li>
+                            <div key={edge.node.fields.slug} className={BlogStyles.post}>
+                                <Link to={`/blog/${edge.node.fields.slug}`}>
+                                    <h3>{edge.node.frontmatter.title}</h3>
+                                    <p>{edge.node.frontmatter.date}</p>
+                                    <p>By {edge.node.frontmatter.author}</p>
+                                </Link>
+                            </div>
                         )
                     })}
-                </ol>
+                </div>
             </div>
         </Layout>
     )
