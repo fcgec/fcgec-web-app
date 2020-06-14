@@ -38,7 +38,7 @@ const Blog = props => {
                     </div>
 
                     <div className="container">
-                        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+                        <div className={blogStyles.content} dangerouslySetInnerHTML={{ __html: html }}></div>
                     </div>
 
                     <Link className={blogStyles.backButton} to="/blog">Go Back</Link>

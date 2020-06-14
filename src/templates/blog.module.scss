@@ -24,6 +24,12 @@
   }
 }
 
+.content {
+  a {
+    color: $primary-text;
+  }
+}
+
 .backButton {
   background: $secondary-bg;
   color: $primary-text;
