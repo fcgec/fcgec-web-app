@@ -17,3 +17,18 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.pageTitle {
+  background: $secondary-bg;
+  color: $accent;
+
+  h2 {
+    font-size: 3rem;
+    padding: 3rem;
+  }
+}

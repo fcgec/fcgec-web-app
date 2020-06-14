@@ -1,13 +1,69 @@
 .footer {
   text-align: center;
-  padding: 0.5rem;
+  margin-left: 175px;
   background: $secondary-bg;
   color: $primary-text;
 
   a {
     color: $primary-text;
     text-decoration: none;
+  }
+}
 
+.footerGrid {
+  display: grid;
+  padding: 1rem;
+  background: $accent;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+
+  div {
+    padding: 1rem 2rem;
+  }
+
+  h6 {
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 3px solid $primary-text;
+    font-size: 1.5rem;
+    width: fit-content;
+    text-align: left;
+  }
+
+  span {
+    display: block;
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.75rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0.5rem;
+    padding-left: 0;
+    text-align: left;
+
+    li {
+      margin: 0 auto;
+      padding: 0.5rem 0;
+
+      a {
+        padding-left: 0.1rem;
+        &:hover {
+          color: #fff;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.footerEnd {
+  padding: 1rem;
+
+  a {
     &:hover {
       cursor: pointer;
       color: $accent;
@@ -16,8 +72,42 @@
   }
 }
 
+// Fix to prevent weird container underflow
+.lineBreak {
+  word-break: break-all;
+}
+
+// Mobile
 @media only screen and (max-width: 768px) {
   .footer {
-    display: none;
+    margin-left: 0;
+  }
+
+  .footerGrid {
+    padding: 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+
+    div {
+      padding: 1rem;
+    }
+  }
+
+  .footerEnd {
+    padding-bottom: 5rem;
+  }
+}
+
+// Medium
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Very large screens
+@media only screen and (min-width: 1921px) {
+  .footerGrid {
+    padding: 2rem 4rem;
   }
 }

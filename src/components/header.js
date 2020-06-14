@@ -7,6 +7,7 @@ import { useMedia } from 'react-media';
 
 import headerStyles from './header.module.scss'
 
+// Icons for Navigation
 import HomeIcon from '../images/home.inline.svg'
 import AboutIcon from '../images/about.inline.svg'
 import MembersIcon from '../images/members.inline.svg'
@@ -27,14 +28,13 @@ const Header = ({ siteTitle, location }) => {
     }
   `)
 
+  // For changing the style of the Navbar
   const GLOBAL_MEDIA_QUERIES = {
     small: "(max-width: 768px)",
     large: "(min-width: 769px)"
   };
-
   const matches = useMedia({ queries: GLOBAL_MEDIA_QUERIES });
-
-  const activeLinkStyles = { color: "#0069ff" };
+  const activeLinkStyles = { color: "#0069ff", background: "#131314" };
 
   if (matches.small)
     activeLinkStyles.borderTop = "0.25rem solid #0069ff";

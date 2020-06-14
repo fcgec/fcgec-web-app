@@ -7,10 +7,13 @@ import SEO from "../components/seo"
 const EventsPage = () => (
     <Layout>
         <SEO title="Events" />
-        <h1>Events Page</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magnam ea vero, ullam quo hic. Ipsum facilis itaque quia fugiat, nemo maxime, atque quasi optio, eveniet neque et magnam totam.
-        </p>
+        <section className="pageTitle">
+            <h2>Events</h2>
+        </section>
+
+        <div className="container">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ipsam quos iste maiores quo consequatur qui illo molestiae ullam ducimus explicabo error rem eligendi, sequi recusandae perspiciatis, magnam pariatur ipsa.</p>
+        </div>
     </Layout>
 )
 
