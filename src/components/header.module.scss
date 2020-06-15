@@ -116,3 +116,11 @@
     }
   }
 }
+
+// Not sure how i want it to appear on very large displays
+// Currently centering the content
+@media only screen and (min-width: 1600px) {
+  .header {
+    left: calc(50vw - 800px);
+  }
+}

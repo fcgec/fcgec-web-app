@@ -1,7 +1,7 @@
 .postGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 1rem;
+  gap: 1rem;
 }
 
 .post {
@@ -32,5 +32,18 @@
     box-shadow: 0 0.5rem 1rem #000;
 
     transition: all 0.3s ease-in-out;
+  }
+}
+
+// Mobile
+@media only screen and (max-width: 450px) {
+  .postGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+  .postGrid {
+    grid-template-columns: 1fr 1fr;
   }
 }
