@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -53,28 +53,37 @@ const EventsPage = () => {
 
 			<div className="container">
 				<h3 className={eventStyles.whichEvent}>Upcoming Events</h3>
-				<div className={eventStyles.eventsGrid}>
-					{newEvents.map(edge => (
-						<div key={edge.node.id} className={eventStyles.event}>
-							<h4>{edge.node.frontmatter.title}</h4>
-							<p>{edge.node.frontmatter.date}</p>
-							<p>{edge.node.excerpt}</p>
-						</div>
-					))}
-				</div>
+				{!newEvents.length ? <h4 className={eventStyles.checkEvent}>No upcoming events.</h4> :
+					<div className={eventStyles.eventsGrid}>
+						{newEvents.map(edge => (
+							<div key={edge.node.id} className={eventStyles.event}>
+								<Link to={`/events/${edge.node.fields.slug}`}>
+									<h4>{edge.node.frontmatter.title}</h4>
+									<p>{edge.node.frontmatter.date}</p>
+									<p>{edge.node.excerpt}</p>
+								</Link>
+							</div>
+						))}
+					</div>
+				}
 			</div>
 
 			<div className="container">
 				<h3 className={eventStyles.whichEvent}>Past Events</h3>
-				<div className={eventStyles.eventsGrid}>
-					{oldEvents.map(edge => (
-						<div key={edge.node.id} className={eventStyles.event}>
-							<h4>{edge.node.frontmatter.title}</h4>
-							<p>{edge.node.frontmatter.date}</p>
-							<p>{edge.node.excerpt}</p>
-						</div>
-					))}
-				</div>
+				{!oldEvents.length ? <h4 className={eventStyles.checkEvent}>No past events found.</h4> :
+					<div className={eventStyles.eventsGrid}>
+						{oldEvents.map(edge => (
+							<div key={edge.node.id} className={eventStyles.event}>
+								<Link to={`/events/${edge.node.fields.slug}`}>
+									<h4>{edge.node.frontmatter.title}</h4>
+									<p>{edge.node.frontmatter.date}</p>
+									<p>By {edge.node.frontmatter.author}</p>
+									<p>{edge.node.excerpt}</p>
+								</Link>
+							</div>
+						))}
+					</div>
+				}
 			</div>
 		</Layout >
 	)

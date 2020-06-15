@@ -4,6 +4,8 @@ date: "2019-07-15"
 author: "Vipul Chodankar"
 ---
 
+PLACEHOLDER
+
 # Linux Installfest 1
 
 1. Ubuntu Installation Demo

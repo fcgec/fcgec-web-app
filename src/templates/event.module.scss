@@ -1,0 +1,53 @@
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.header {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid $accent;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    line-height: 1.5rem;
+
+    &:nth-of-type(1) {
+      color: $accent;
+    }
+
+    &:nth-of-type(2) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.content {
+  * {
+    padding: 0.2rem;
+  }
+  a {
+    color: $primary-text;
+  }
+
+  code {
+    background: $secondary-bg;
+  }
+}
+
+.backButton {
+  background: $secondary-bg;
+  color: $primary-text;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  user-select: none;
+  border-radius: 0.25rem;
+
+  &:hover {
+    color: $accent;
+    transition: color 0.3s ease-in-out;
+  }
+}

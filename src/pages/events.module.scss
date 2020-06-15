@@ -7,12 +7,13 @@
 .eventsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 1rem;
+  padding: 2rem 1rem;
   gap: 1rem;
 
   h4 {
     padding: 1rem 0;
     font-size: 1.5rem;
+    // min-height: 100px;
   }
 
   p:nth-of-type(1) {
@@ -21,14 +22,26 @@
   }
 }
 
+.checkEvent {
+  padding: 1rem 0;
+}
+
 .event {
   background: $secondary-bg;
   padding: 0.75rem;
   border-radius: 0.2rem;
+  a {
+    color: $primary-text;
+    text-decoration: none;
+  }
 
   &:hover {
     box-shadow: 0 0.5rem 1rem #000;
     transition: all 0.3s ease-in-out;
+  }
+
+  p {
+    padding: 0.2rem 0;
   }
 }
 

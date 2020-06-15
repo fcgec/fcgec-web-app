@@ -47,6 +47,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 const createBlogPage = async (createPage, graphql) => {
     const blogTemplate = path.resolve('./src/templates/blog.js');
+    const eventTemplate = path.resolve('./src/templates/event.js');
 
     // To fetch slug of the blog post
     const res = await graphql(`
@@ -76,7 +77,13 @@ const createBlogPage = async (createPage, graphql) => {
             })
         } else if (edge.node.fields.type === 'event') {
             // Check if it's a events markdown file
-            console.log("Event Page");
+            createPage({
+                component: eventTemplate,
+                path: `/events/${edge.node.fields.slug}`,
+                context: {
+                    slug: edge.node.fields.slug
+                }
+            })
         }
 
     })
