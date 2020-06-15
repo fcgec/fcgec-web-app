@@ -19,8 +19,17 @@ exports.onCreateNode = ({ node, actions }) => {
     }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
+
+    return Promise.all([
+        createBlogPage(createPage, graphql),
+        createMemberPage(createPage, graphql)
+    ]);
+
+};
+
+const createBlogPage = async (createPage, graphql) => {
     const blogTemplate = path.resolve('./src/templates/blog.js');
 
     // To fetch slug of the blog post
@@ -47,5 +56,31 @@ exports.createPages = async ({ graphql, actions }) => {
             }
         })
     })
+}
 
-};
+const createMemberPage = async (createPage, graphql) => {
+    const memberTemplate = path.resolve('./src/templates/member.js');
+
+    // To fetch github username of the member
+    const res = await graphql(`
+        query {
+            allMembersJson {
+                edges {
+                    node {
+                        github
+                    }
+                }   
+            }
+        }
+    `)
+
+    res.data.allMembersJson.edges.forEach(edge => {
+        createPage({
+            component: memberTemplate,
+            path: `/@${edge.node.github}`,
+            context: {
+                github: edge.node.github
+            }
+        })
+    })
+}
