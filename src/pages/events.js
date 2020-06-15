@@ -8,19 +8,25 @@ import eventStyles from './events.module.scss'
 
 const EventsPage = () => {
 	const data = useStaticQuery(graphql`
-    	query {
-    	    allEventsJson {
-    	        edges {
-    	            node {
-    	                id,
-    	                name,
-						date,
-    	            	description
-    	        	}
-    	        }   
-    	    }
-    	}
-	`)
+        query {
+            allMarkdownRemark (filter:{fields:{type:{eq:"event"}}}) {
+                edges {
+                    node {
+						id
+                        frontmatter {
+                            title
+                            date
+                            author
+                        }
+                        excerpt
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }
+        }
+    `)
 
 	function partition(array, callback) {
 		return array.reduce(function (result, element, i) {
@@ -32,8 +38,9 @@ const EventsPage = () => {
 		}, [[], []]
 		);
 	};
+
 	// Function to split array into into New Events and Old Events
-	const [newEvents, oldEvents] = partition(data.allEventsJson.edges, edge => new Date(edge.node.date) > Date.now())
+	const [newEvents, oldEvents] = partition(data.allMarkdownRemark.edges, edge => new Date(edge.node.frontmatter.date) > Date.now())
 
 	return (
 		<Layout>
@@ -49,9 +56,9 @@ const EventsPage = () => {
 				<div className={eventStyles.eventsGrid}>
 					{newEvents.map(edge => (
 						<div key={edge.node.id} className={eventStyles.event}>
-							<h4>{edge.node.name}</h4>
-							<p>{edge.node.date}</p>
-							<p>{edge.node.description}</p>
+							<h4>{edge.node.frontmatter.title}</h4>
+							<p>{edge.node.frontmatter.date}</p>
+							<p>{edge.node.excerpt}</p>
 						</div>
 					))}
 				</div>
@@ -62,9 +69,9 @@ const EventsPage = () => {
 				<div className={eventStyles.eventsGrid}>
 					{oldEvents.map(edge => (
 						<div key={edge.node.id} className={eventStyles.event}>
-							<h4>{edge.node.name}</h4>
-							<p>{edge.node.date}</p>
-							<p>{edge.node.description}</p>
+							<h4>{edge.node.frontmatter.title}</h4>
+							<p>{edge.node.frontmatter.date}</p>
+							<p>{edge.node.excerpt}</p>
 						</div>
 					))}
 				</div>

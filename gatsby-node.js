@@ -11,11 +11,27 @@ exports.onCreateNode = ({ node, actions }) => {
     if (node.internal.type === 'MarkdownRemark') {
         const slug = path.basename(node.fileAbsolutePath, '.md');
 
+        // Add slug field
         createNodeField({
             node,
             name: 'slug',
             value: slug
-        })
+        });
+
+        // Add type field if blog or event
+        if (/content\/blog/.test(node.fileAbsolutePath)) {
+            createNodeField({
+                node,
+                name: 'type',
+                value: 'blog'
+            });
+        } else if (/content\/events/.test(node.fileAbsolutePath)) {
+            createNodeField({
+                node,
+                name: 'type',
+                value: 'event'
+            });
+        }
     }
 };
 
@@ -40,6 +56,7 @@ const createBlogPage = async (createPage, graphql) => {
                     node {
                         fields {
                             slug
+                            type
                         }
                     }
                 }
@@ -48,13 +65,20 @@ const createBlogPage = async (createPage, graphql) => {
     `)
 
     res.data.allMarkdownRemark.edges.forEach(edge => {
-        createPage({
-            component: blogTemplate,
-            path: `/blog/${edge.node.fields.slug}`,
-            context: {
-                slug: edge.node.fields.slug
-            }
-        })
+        if (edge.node.fields.type === 'blog') {
+            // Check if it's a blog markdown file
+            createPage({
+                component: blogTemplate,
+                path: `/blog/${edge.node.fields.slug}`,
+                context: {
+                    slug: edge.node.fields.slug
+                }
+            })
+        } else if (edge.node.fields.type === 'event') {
+            // Check if it's a events markdown file
+            console.log("Event Page");
+        }
+
     })
 }
 
