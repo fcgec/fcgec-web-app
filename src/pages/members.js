@@ -18,7 +18,8 @@ const MembersPage = () => {
 					    image,
     	      	github,
               twitter,
-              website
+              website,
+              linkedin
     	    	}
     	    }   
     	  }

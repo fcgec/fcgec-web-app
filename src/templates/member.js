@@ -10,6 +10,7 @@ import GitHubIcon from '../images/github.inline.svg'
 import TwitterIcon from '../images/twitter.inline.svg'
 import WebsiteIcon from '../images/website.inline.svg'
 import UserIcon from '../images/placeholder.inline.svg'
+import LinkedInIcon from '../images/linkedin.inline.svg'
 
 export const query = graphql`
     query ($github: String!) {
@@ -18,13 +19,14 @@ export const query = graphql`
             image,
             github,
             twitter,
-            website
+            website,
+            linkedin
         }
     }
 `
 
 const Member = props => {
-    const { membersJson: { name, image, github, twitter, website }
+    const { membersJson: { name, image, github, twitter, website, linkedin }
     } = props.data;
 
 
@@ -53,6 +55,12 @@ const Member = props => {
                                 aria-label={`Link to ${name}'s Twitter Profile`}>
                                 <TwitterIcon className={memberStyles.svgColor} />
                                 <p> Twitter</p>
+                            </a> : ``}
+
+                            {linkedin ? <a href={`https://twitter.com/in/${linkedin}`}
+                                aria-label={`Link to ${name}'s LinkedIn Profile`}>
+                                <LinkedInIcon className={memberStyles.svgColor} />
+                                <p> LinkedIn</p>
                             </a> : ``}
 
                             {website ? <a href={website}

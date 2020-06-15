@@ -7,8 +7,10 @@ import UserIcon from '../../images/placeholder.inline.svg'
 import GitHubIcon from '../../images/github.inline.svg'
 import TwitterIcon from '../../images/twitter.inline.svg'
 import WebsiteIcon from '../../images/website.inline.svg'
+import LinkedInIcon from '../../images/linkedin.inline.svg'
 
-const MemberCard = ({ name, image, github, twitter, website }) => {
+const MemberCard = ({ name, image, github, twitter, website, linkedin }) => {
+    console.log(linkedin)
     return (
         <div >
             <Link to={`/@${github}`} className={memberCardStyles.memberCard}>
@@ -28,6 +30,10 @@ const MemberCard = ({ name, image, github, twitter, website }) => {
                         {twitter ? <a href={`https://twitter.com/${twitter}`}
                             aria-label={`Link to ${name}'s Twitter Profile`}>
                             <TwitterIcon className={memberCardStyles.svgColor} /></a> : ``}
+
+                        {linkedin ? <a href={`https://linkedin.com/in/${linkedin}`}
+                            aria-label={`Link to ${name}'s LinkedIn Profile`}>
+                            <LinkedInIcon className={memberCardStyles.svgColor} /></a> : ``}
 
                         {website ? <a href={website}
                             aria-label={`Link to ${name}'s Website`}>
