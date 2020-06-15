@@ -1,11 +1,10 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useMedia } from 'react-media';
 
-import headerStyles from './header.module.scss'
+import navbarStyles from './navbar.module.scss'
 
 // Icons for Navigation
 import HomeIcon from '../images/home.inline.svg'
@@ -15,7 +14,7 @@ import ProjectsIcon from '../images/projects.inline.svg'
 import BlogIcon from '../images/blog.inline.svg'
 import EventsIcon from '../images/events.inline.svg'
 
-const Header = ({ siteTitle, location }) => {
+const Navbar = ({ siteTitle, location }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "FCGEC.png" }) {
@@ -42,7 +41,7 @@ const Header = ({ siteTitle, location }) => {
     activeLinkStyles.borderLeft = "0.25rem solid #0069ff";
 
   return (
-    <header className={headerStyles.header}>
+    <header className={navbarStyles.header}>
       <div>
         <h1>
           <Link to="/">
@@ -59,32 +58,32 @@ const Header = ({ siteTitle, location }) => {
       <ul>
         <li>
           <Link activeStyle={activeLinkStyles} to="/">
-            <HomeIcon className={headerStyles.svgColor} /> <p>Home</p>
+            <HomeIcon className={navbarStyles.svgColor} /> <p>Home</p>
           </Link>
         </li>
         <li>
           <Link activeStyle={activeLinkStyles} to="/events">
-            <EventsIcon className={headerStyles.svgColor} /> <p>Events</p>
+            <EventsIcon className={navbarStyles.svgColor} /> <p>Events</p>
           </Link>
         </li>
         <li>
           <Link activeStyle={activeLinkStyles} to="/about">
-            <AboutIcon className={headerStyles.svgColor} /> <p>About</p>
+            <AboutIcon className={navbarStyles.svgColor} /> <p>About</p>
           </Link>
         </li>
         <li>
           <Link activeStyle={activeLinkStyles} to="/members">
-            <MembersIcon className={headerStyles.svgColor} /> <p>Members</p>
+            <MembersIcon className={navbarStyles.svgColor} /> <p>Members</p>
           </Link>
         </li>
         <li>
           <Link activeStyle={activeLinkStyles} to="/projects">
-            <ProjectsIcon className={headerStyles.svgColor} /> <p>Projects</p>
+            <ProjectsIcon className={navbarStyles.svgColor} /> <p>Projects</p>
           </Link>
         </li>
         <li>
           <Link activeStyle={activeLinkStyles} to="/blog">
-            <BlogIcon className={headerStyles.svgColor} /> <p>Blog</p>
+            <BlogIcon className={navbarStyles.svgColor} /> <p>Blog</p>
           </Link>
         </li>
       </ul>
@@ -92,12 +91,12 @@ const Header = ({ siteTitle, location }) => {
   )
 }
 
-Header.propTypes = {
+Navbar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Navbar.defaultProps = {
   siteTitle: `FOSS Community GEC`,
 }
 
-export default Header
+export default Navbar

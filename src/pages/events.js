@@ -9,7 +9,10 @@ import eventStyles from './events.module.scss'
 const EventsPage = () => {
 	const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark (filter:{fields:{type:{eq:"event"}}}) {
+            allMarkdownRemark (
+				filter:{fields:{type:{eq:"event"}}},
+                sort: {fields: [frontmatter___date], order: DESC}
+			) {
                 edges {
                     node {
 						id

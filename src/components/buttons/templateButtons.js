@@ -8,13 +8,9 @@ import BackButton from './backButton'
 
 import templateButtonsStyles from './templateButtons.module.scss'
 
-const fetchLocation = () => {
-    return window.location.href;
-};
-
 const TemplateButtons = ({ where, slug }) => {
 
-    let shareUrl = ` https://fcgec.netlify.com/${where}/${slug}`
+    let shareUrl = ` https://fcgec.netlify.app/${where}/${slug}`
 
     if (where === 'members')
         shareUrl = shareUrl.replace(/^/, "Check out this FCGEC member's profile!\n");

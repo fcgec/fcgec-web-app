@@ -18,6 +18,7 @@ export const query = graphql`
             fields {
                 slug
             }
+            excerpt
             html
             timeToRead
         }
@@ -26,13 +27,15 @@ export const query = graphql`
 
 const Blog = props => {
     const { markdownRemark } = props.data;
-    const { html, timeToRead,
+    const { html, timeToRead, excerpt,
         frontmatter: { title, date, author },
         fields: { slug } } = markdownRemark;
 
     return (
         <Layout>
-            <SEO title={title} />
+            <SEO title={title}
+                description={excerpt}
+            />
             <div className="container">
                 <div className={blogStyles.container}>
                     <div className={blogStyles.header}>
