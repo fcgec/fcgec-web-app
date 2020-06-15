@@ -1,0 +1,19 @@
+.backButton {
+  background: $secondary-bg;
+  color: $primary-text;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  user-select: none;
+  border-radius: 0.25rem;
+  margin: 0 0.5rem;
+
+  p {
+    line-height: 40px;
+  }
+
+  &:hover {
+    color: $accent;
+    transition: color 0.3s ease-in-out;
+  }
+}

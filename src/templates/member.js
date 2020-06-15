@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import TemplateButtons from '../components/buttons/templateButtons'
 
 import memberStyles from './member.module.scss'
 
@@ -70,8 +71,8 @@ const Member = props => {
                             </a> : ``}
                         </div>
                     </div>
-                    <Link className={memberStyles.backButton} to="/members">Go Back</Link>
                 </div>
+                <TemplateButtons where="members" slug={`@${github}`} />
             </div>
         </Layout>
     )

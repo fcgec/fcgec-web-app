@@ -25,7 +25,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "react-media": "^2.0.0-rc.1"
+    "react-media": "^2.0.0-rc.1",
+    "react-share": "^4.2.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

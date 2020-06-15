@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import TemplateButtons from '../components/buttons/templateButtons'
 
 import eventStyles from './event.module.scss'
 
@@ -14,6 +15,9 @@ export const query = graphql`
                 date
                 author
             }
+            fields {
+                slug
+            }
             html
             timeToRead
         }
@@ -23,8 +27,9 @@ export const query = graphql`
 const Blog = props => {
 
     const { markdownRemark } = props.data;
-    const { title, date, author } = markdownRemark.frontmatter;
-    const { html, timeToRead } = markdownRemark;
+    const { html, timeToRead,
+        frontmatter: { title, date, author },
+        fields: { slug } } = markdownRemark;
 
     return (
         <Layout>
@@ -40,9 +45,8 @@ const Blog = props => {
                     <div className="container">
                         <div className={eventStyles.content} dangerouslySetInnerHTML={{ __html: html }}></div>
                     </div>
-
-                    <Link className={eventStyles.backButton} to="/events">Go Back</Link>
                 </div>
+                <TemplateButtons where="events" slug={slug} />
             </div>
         </Layout>
     )

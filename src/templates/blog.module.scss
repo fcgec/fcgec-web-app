@@ -36,18 +36,3 @@
     background: $secondary-bg;
   }
 }
-
-.backButton {
-  background: $secondary-bg;
-  color: $primary-text;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  outline: none;
-  user-select: none;
-  border-radius: 0.25rem;
-
-  &:hover {
-    color: $accent;
-    transition: color 0.3s ease-in-out;
-  }
-}
