@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-json`,
     {
       // For content like blog posts 
       resolve: `gatsby-source-filesystem`,

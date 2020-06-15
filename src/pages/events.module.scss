@@ -1,0 +1,46 @@
+.whichEvent {
+  border-bottom: 3px solid $accent;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+
+  h4 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+  }
+
+  p:nth-of-type(1) {
+    padding-bottom: 0.5rem;
+    color: $accent;
+  }
+}
+
+.event {
+  background: $secondary-bg;
+  padding: 0.75rem;
+  border-radius: 0.2rem;
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem #000;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// Mobile
+@media only screen and (max-width: 450px) {
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+  .eventsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
