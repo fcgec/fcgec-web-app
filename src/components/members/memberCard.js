@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link/AniLink'
 
 import memberCardStyles from './memberCard.module.scss'
 
@@ -10,10 +11,9 @@ import WebsiteIcon from '../../images/website.inline.svg'
 import LinkedInIcon from '../../images/linkedin.inline.svg'
 
 const MemberCard = ({ name, image, github, twitter, website, linkedin }) => {
-    console.log(linkedin)
     return (
         <div >
-            <Link to={`/@${github}`} className={memberCardStyles.memberCard}>
+            <Link cover direction="right" bg="#0069FF" duration={0.6} to={`/@${github}`} className={memberCardStyles.memberCard}>
                 {image ?
                     <img src={image} alt={name} className={memberCardStyles.memberImage} />
                     : <UserIcon className={memberCardStyles.svgProfile} />

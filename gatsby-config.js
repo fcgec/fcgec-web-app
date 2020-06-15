@@ -59,6 +59,13 @@ module.exports = {
     },
     'gatsby-plugin-optimize-svgs',
     {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/layout.js`),
+        injectPageProps: false
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `FOSS Community GEC`,

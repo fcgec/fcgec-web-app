@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MemberCard from "../components/members/memberCard"
 
@@ -27,7 +27,8 @@ const MembersPage = () => {
   `)
 
   return (
-    <Layout>
+    // <Layout>
+    <div>
       <SEO title="Members"
         description="The members of FOSS Community GEC. Find their information here. FCGEC Members include current students and alumni of the college."
       />
@@ -42,7 +43,8 @@ const MembersPage = () => {
           ))}
         </div>
       </div>
-    </Layout>
+      {/* </Layout> */}
+    </div>
   )
 }
 

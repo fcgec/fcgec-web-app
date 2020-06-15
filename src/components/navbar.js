@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Link from 'gatsby-plugin-transition-link/AniLink'
 import Img from "gatsby-image"
 import { useMedia } from 'react-media';
 
@@ -44,7 +45,7 @@ const Navbar = ({ siteTitle, location }) => {
     <header className={navbarStyles.header}>
       <div>
         <h1>
-          <Link to="/">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} to="/">
             <Img fluid={data.file.childImageSharp.fluid}
               imgStyle={{ objectFit: 'contain' }}
               alt="Logo" />
@@ -57,32 +58,32 @@ const Navbar = ({ siteTitle, location }) => {
       </div>
       <ul>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} activeStyle={activeLinkStyles} to="/">
             <HomeIcon className={navbarStyles.svgColor} /> <p>Home</p>
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/events">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} activeStyle={activeLinkStyles} to="/events">
             <EventsIcon className={navbarStyles.svgColor} /> <p>Events</p>
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/about">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} activeStyle={activeLinkStyles} to="/about">
             <AboutIcon className={navbarStyles.svgColor} /> <p>About</p>
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/members">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} activeStyle={activeLinkStyles} to="/members">
             <MembersIcon className={navbarStyles.svgColor} /> <p>Members</p>
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/projects">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} activeStyle={activeLinkStyles} to="/projects">
             <ProjectsIcon className={navbarStyles.svgColor} /> <p>Projects</p>
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/blog">
+          <Link cover direction="right" bg="#0069FF" duration={0.6} activeStyle={activeLinkStyles} to="/blog">
             <BlogIcon className={navbarStyles.svgColor} /> <p>Blog</p>
           </Link>
         </li>
