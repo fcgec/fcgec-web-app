@@ -6,7 +6,9 @@ import SEO from "../components/seo"
 
 const ProjectsPage = () => (
     <Layout>
-        <SEO title="Projects" />
+        <SEO title="Projects"
+            description="Projects built by members of FOSS Community GEC."
+        />
         <section className="pageTitle">
             <h2>Projects</h2>
         </section>

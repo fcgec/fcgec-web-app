@@ -27,7 +27,9 @@ const MembersPage = () => {
 
   return (
     <Layout>
-      <SEO title="Members" />
+      <SEO title="Members"
+        description="The members of FOSS Community GEC. Find their information here. FCGEC Members include current students and alumni of the college."
+      />
       <section className="pageTitle">
         <h2>Members</h2>
       </section>

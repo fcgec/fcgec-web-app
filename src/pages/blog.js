@@ -29,7 +29,9 @@ const BlogPage = () => {
 
     return (
         <Layout>
-            <SEO title="Blog" />
+            <SEO title="Blog"
+                description="Blog posts by members of FOSS Community GEC."
+            />
 
             <section className="pageTitle">
                 <h2>Blog</h2>
