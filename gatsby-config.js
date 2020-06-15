@@ -50,18 +50,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `fcgec-webapp`,
-        short_name: `fcgec-webapp`,
-        start_url: `/`,
-        background_color: `#070813`,
-        theme_color: `#070813`,
-        display: `standalone`,
-        icon: `src/images/FCGEC.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
@@ -70,9 +58,28 @@ module.exports = {
       }
     },
     'gatsby-plugin-optimize-svgs',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `FOSS Community GEC`,
+        short_name: `FCGEC`,
+        start_url: `/`,
+        background_color: `#070813`,
+        theme_color: `#070813`,
+        display: `standalone`,
+        icon: `src/images/FCGEC.png`, // This path is relative to the root of the site.
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*']
+        }
+      }
+    },
     {
       resolve: 'gatsby-plugin-sass',
       options: {
