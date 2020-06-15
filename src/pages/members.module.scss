@@ -4,37 +4,6 @@
   gap: 1rem;
 }
 
-.memberGridItem {
-  display: flex;
-  align-items: center;
-
-  img {
-    border-radius: 50%;
-    height: 64px;
-  }
-}
-
-.svgColor {
-  filter: invert(100%);
-}
-
-.svgProfile {
-  @extend .svgColor;
-  height: 4rem;
-  width: 4rem;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0.5rem;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-}
-
 // Mobile
 @media only screen and (max-width: 768px) {
   .membersGrid {

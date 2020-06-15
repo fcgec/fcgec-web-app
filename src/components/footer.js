@@ -20,7 +20,7 @@ const Footer = () => {
                 <div>
                     <h6>Students</h6>
                     <ul>
-                        <li><a href="#">How to join?</a></li>
+                        <li><a href="https://github.com/fcgec/">How to join?</a></li>
                         <li><a href="https://github.com/fcgec/resources">Learning Resources</a></li>
                         <li><Link to="/events">Events &amp; Workshops</Link></li>
                     </ul>

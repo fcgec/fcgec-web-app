@@ -3,13 +3,9 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import MemberCard from "../components/members/memberCard"
 
 import membersStyles from './members.module.scss'
-
-import UserIcon from '../images/placeholder.inline.svg'
-import GitHubIcon from '../images/github.inline.svg'
-import TwitterIcon from '../images/twitter.inline.svg'
-import WebsiteIcon from '../images/website.inline.svg'
 
 const MembersPage = () => {
   const data = useStaticQuery(graphql`
@@ -29,8 +25,6 @@ const MembersPage = () => {
     	}
   `)
 
-  console.log(data);
-
   return (
     <Layout>
       <SEO title="Members" />
@@ -41,20 +35,7 @@ const MembersPage = () => {
       <div className="container">
         <div className={membersStyles.membersGrid}>
           {data.allMembersJson.edges.map(edge => (
-            <div key={edge.node.id} className={membersStyles.memberGridItem}>
-              {edge.node.image ?
-                <img src={edge.node.image} alt="Image" className={membersStyles.memberImage} />
-                : <UserIcon className={membersStyles.svgProfile} />
-              }
-              <div className={membersStyles.info}>
-                <h3>{edge.node.name}</h3>
-                <div className={membersStyles.links}>
-                  {edge.node.github ? <a href={`https://github.com/${edge.node.github}`}><GitHubIcon className={membersStyles.svgColor} /></a> : ``}
-                  {edge.node.twitter ? <a href={`https://twitter.com/${edge.node.twitter}`}><TwitterIcon className={membersStyles.svgColor} /></a> : ``}
-                  {edge.node.website ? <a href={edge.node.website}><WebsiteIcon className={membersStyles.svgColor} /></a> : ``}
-                </div>
-              </div>
-            </div>
+            <MemberCard key={edge.node.id} {...edge.node} />
           ))}
         </div>
       </div>

@@ -1,0 +1,38 @@
+.memberCard {
+  display: flex;
+  align-items: center;
+  h3 {
+    line-height: 1.5rem;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 64px;
+  }
+}
+
+.svgColor {
+  filter: invert(100%);
+
+  &:hover {
+    filter: invert(50%);
+    transition: filter 0.3s ease-in-out;
+  }
+}
+
+.svgProfile {
+  @extend .svgColor;
+  height: 4rem;
+  width: 4rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
