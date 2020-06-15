@@ -1,6 +1,15 @@
 .memberCard {
   display: flex;
   align-items: center;
+  background: $secondary-bg;
+  border-radius: 4rem;
+
+  a {
+    height: 100%;
+    color: $primary-text;
+    text-decoration: none;
+  }
+
   h3 {
     line-height: 1.5rem;
   }
@@ -8,6 +17,11 @@
   img {
     border-radius: 50%;
     height: 64px;
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 1.5rem #000;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -30,9 +44,10 @@
   display: flex;
   flex-direction: column;
   padding-left: 0.5rem;
+  width: 100%;
 }
 
 .links {
   display: flex;
-  justify-content: center;
+  // justify-content: start;
 }

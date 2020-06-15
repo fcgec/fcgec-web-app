@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import memberCardStyles from './memberCard.module.scss'
 
@@ -16,22 +17,25 @@ const MemberCard = ({ name, image, github, twitter, website }) => {
             }
 
             <div className={memberCardStyles.info}>
-                <h3>{name}</h3>
+                <Link to={`/@${github}`}>
+                    <h3>{name}</h3>
 
-                <div className={memberCardStyles.links}>
-                    {github ? <a href={`https://github.com/${github}`}
-                        aria-label={`Link to ${name}'s GitHub Profile`}>
-                        <GitHubIcon className={memberCardStyles.svgColor} /></a> : ``}
+                    <div className={memberCardStyles.links}>
+                        {github ? <a href={`https://github.com/${github}`}
+                            aria-label={`Link to ${name}'s GitHub Profile`}>
+                            <GitHubIcon className={memberCardStyles.svgColor} /></a> : ``}
 
-                    {twitter ? <a href={`https://twitter.com/${twitter}`}
-                        aria-label={`Link to ${name}'s Twitter Profile`}>
-                        <TwitterIcon className={memberCardStyles.svgColor} /></a> : ``}
+                        {twitter ? <a href={`https://twitter.com/${twitter}`}
+                            aria-label={`Link to ${name}'s Twitter Profile`}>
+                            <TwitterIcon className={memberCardStyles.svgColor} /></a> : ``}
 
-                    {website ? <a href={website}
-                        aria-label={`Link to ${name}'s Website`}>
-                        <WebsiteIcon className={memberCardStyles.svgColor} /></a> : ``}
-                </div>
+                        {website ? <a href={website}
+                            aria-label={`Link to ${name}'s Website`}>
+                            <WebsiteIcon className={memberCardStyles.svgColor} /></a> : ``}
+                    </div>
+                </Link>
             </div>
+
         </div>
     )
 }
