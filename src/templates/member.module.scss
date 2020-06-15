@@ -55,10 +55,29 @@
   }
 }
 
+.backButton {
+  background: $secondary-bg;
+  color: $primary-text;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  user-select: none;
+  border-radius: 0.25rem;
+
+  &:hover {
+    color: $accent;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .links {
     a {
       margin: 0.75rem auto;
     }
+  }
+
+  .backButton {
+    margin: 0 auto;
   }
 }

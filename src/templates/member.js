@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -62,6 +62,7 @@ const Member = props => {
                             </a> : ``}
                         </div>
                     </div>
+                    <Link className={memberStyles.backButton} to="/members">Go Back</Link>
                 </div>
             </div>
         </Layout>

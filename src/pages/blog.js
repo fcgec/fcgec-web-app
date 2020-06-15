@@ -18,6 +18,7 @@ const BlogPage = () => {
                             date
                             author
                         }
+                        excerpt
                         fields {
                             slug
                         }
@@ -46,6 +47,7 @@ const BlogPage = () => {
                                     <h3>{edge.node.frontmatter.title}</h3>
                                     <p>{edge.node.frontmatter.date}</p>
                                     <p>By {edge.node.frontmatter.author}</p>
+                                    <p>{edge.node.excerpt}</p>
                                 </Link>
                             </div>
                         )

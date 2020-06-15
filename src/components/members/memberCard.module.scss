@@ -3,12 +3,10 @@
   align-items: center;
   background: $secondary-bg;
   border-radius: 4rem;
+  user-select: none;
 
-  a {
-    height: 100%;
-    color: $primary-text;
-    text-decoration: none;
-  }
+  color: $primary-text;
+  text-decoration: none;
 
   h3 {
     line-height: 1.5rem;
@@ -19,7 +17,8 @@
     height: 64px;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     box-shadow: 0 0.5rem 1.5rem #000;
     transition: all 0.3s ease-in-out;
   }

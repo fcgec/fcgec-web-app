@@ -10,14 +10,14 @@ import WebsiteIcon from '../../images/website.inline.svg'
 
 const MemberCard = ({ name, image, github, twitter, website }) => {
     return (
-        <div className={memberCardStyles.memberCard}>
-            {image ?
-                <img src={image} alt={name} className={memberCardStyles.memberImage} />
-                : <UserIcon className={memberCardStyles.svgProfile} />
-            }
+        <div >
+            <Link to={`/@${github}`} className={memberCardStyles.memberCard}>
+                {image ?
+                    <img src={image} alt={name} className={memberCardStyles.memberImage} />
+                    : <UserIcon className={memberCardStyles.svgProfile} />
+                }
 
-            <div className={memberCardStyles.info}>
-                <Link to={`/@${github}`}>
+                <div className={memberCardStyles.info}>
                     <h3>{name}</h3>
 
                     <div className={memberCardStyles.links}>
@@ -33,9 +33,9 @@ const MemberCard = ({ name, image, github, twitter, website }) => {
                             aria-label={`Link to ${name}'s Website`}>
                             <WebsiteIcon className={memberCardStyles.svgColor} /></a> : ``}
                     </div>
-                </Link>
-            </div>
 
+                </div>
+            </Link>
         </div>
     )
 }

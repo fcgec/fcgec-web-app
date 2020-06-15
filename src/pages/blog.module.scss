@@ -22,6 +22,10 @@
 
   p {
     font-size: 0.9rem;
+
+    &:nth-of-type(3) {
+      padding-top: 0.5rem;
+    }
   }
 
   a {
