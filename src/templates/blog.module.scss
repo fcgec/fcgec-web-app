@@ -25,8 +25,15 @@
 }
 
 .content {
+  * {
+    padding: 0.2rem;
+  }
   a {
     color: $primary-text;
+  }
+
+  code {
+    background: $secondary-bg;
   }
 }
 

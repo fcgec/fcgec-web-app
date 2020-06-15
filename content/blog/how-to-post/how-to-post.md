@@ -10,6 +10,23 @@ We'll follow the following structure to ensure things stay organized.
 
 <br>
 
+## How to save the post
+
+1. Fork the repo
+1. Clone the forked repo
+   > `git clone https://github.com/<YourUserName>/new-webapp`
+1. Create a new branch (folder-name explained in the folder structure)
+   > `git checkout -b blog-folder-name`
+1. Add your files
+   > Example `git add .` to add everything
+1. Commit your changes with a meaning message
+   > `git commit -m "Blog: folder-name"`
+1. Push your changes to your forked repo
+   > `git push -u origin blog-folder-name`
+1. Create Pull Request on GitHub and add label 'blog'
+
+<br>
+
 ## Folder Structure
 
 ![Random image](./folder-structure.jpeg)
@@ -18,6 +35,7 @@ We'll follow the following structure to ensure things stay organized.
 1. Use kebab case to name the folder, the same name will be used for your file. For example, in the above picture, I name my file and folder as 'how-to-post'.
 1. Create a markdown file with the same name as your folder.
 1. Add any images that you will require to the folder or directly use their links.
+   > Supported image types: PNG & JPEG
 
 <br>
 
