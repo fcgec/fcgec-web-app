@@ -61,7 +61,7 @@ const EventsPage = () => {
 					<div className={eventStyles.eventsGrid}>
 						{newEvents.map(edge => (
 							<div key={edge.node.id} className={eventStyles.event}>
-								<Link cover direction="right" bg="#0069FF" duration={0.6} to={`/events/${edge.node.fields.slug}`}>
+								<Link cover direction="up" bg="#131314" duration={0.5} to={`/events/${edge.node.fields.slug}`}>
 									<h4>{edge.node.frontmatter.title}</h4>
 									<p>{edge.node.frontmatter.date}</p>
 									<p>{edge.node.excerpt}</p>
@@ -78,7 +78,7 @@ const EventsPage = () => {
 					<div className={eventStyles.eventsGrid}>
 						{oldEvents.map(edge => (
 							<div key={edge.node.id} className={eventStyles.event}>
-								<Link cover direction="right" bg="#0069FF" duration={0.6} to={`/events/${edge.node.fields.slug}`}>
+								<Link cover direction="up" bg="#131314" duration={0.5} to={`/events/${edge.node.fields.slug}`}>
 									<h4>{edge.node.frontmatter.title}</h4>
 									<p>{edge.node.frontmatter.date}</p>
 									<p>By {edge.node.frontmatter.author}</p>

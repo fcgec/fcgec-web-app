@@ -47,7 +47,7 @@ const BlogPage = () => {
                     {data.allMarkdownRemark.edges.map(edge => {
                         return (
                             <div key={edge.node.fields.slug} className={BlogStyles.post}>
-                                <Link cover direction="right" bg="#0069FF" duration={0.6} to={`/blog/${edge.node.fields.slug}`}>
+                                <Link cover direction="up" bg="#131314" duration={0.5} to={`/blog/${edge.node.fields.slug}`}>
                                     <h3>{edge.node.frontmatter.title}</h3>
                                     <p>{edge.node.frontmatter.date}</p>
                                     <p>By {edge.node.frontmatter.author}</p>

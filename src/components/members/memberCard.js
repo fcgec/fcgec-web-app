@@ -13,7 +13,7 @@ import LinkedInIcon from '../../images/linkedin.inline.svg'
 const MemberCard = ({ name, image, github, twitter, website, linkedin }) => {
     return (
         <div >
-            <Link cover direction="right" bg="#0069FF" duration={0.6} to={`/@${github}`} className={memberCardStyles.memberCard}>
+            <Link cover direction="up" bg="#131314" duration={0.5} to={`/@${github}`} className={memberCardStyles.memberCard}>
                 {image ?
                     <img src={image} alt={name} className={memberCardStyles.memberImage} />
                     : <UserIcon className={memberCardStyles.svgProfile} />

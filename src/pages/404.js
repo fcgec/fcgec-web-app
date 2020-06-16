@@ -12,7 +12,7 @@ const NotFoundPage = () => (
     <div className="container">
       <h1>404! You probably know what this means, don't you?</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      <Link cover direction="right" bg="#0069FF" duration={0.6} to="/">
+      <Link cover direction="up" bg="#131314" duration={0.5} to="/">
         Take me home!
     </Link>
     </div>

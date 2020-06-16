@@ -7,7 +7,7 @@ import backButtonStyles from './backButton.module.scss'
 const BackButton = ({ where }) => {
 
     return (
-        <Link cover direction="right" bg="#0069FF" duration={0.6} className={backButtonStyles.backButton} to={`/${where}`}><p>Go Back</p></Link>
+        <Link cover direction="up" bg="#131314" duration={0.5} className={backButtonStyles.backButton} to={`/${where}`}><p>Go Back</p></Link>
     )
 }
 
