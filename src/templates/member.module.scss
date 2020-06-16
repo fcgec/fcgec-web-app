@@ -59,6 +59,12 @@
   }
 }
 
+.svgProfile {
+  @extend .svgColor;
+  height: 100%;
+  width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .member {
     grid-template-columns: 1fr;

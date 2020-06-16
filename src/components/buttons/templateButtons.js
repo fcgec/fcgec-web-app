@@ -10,7 +10,12 @@ import templateButtonsStyles from './templateButtons.module.scss'
 
 const TemplateButtons = ({ where, slug }) => {
 
-    let shareUrl = ` https://fcgec.netlify.app/${where}/${slug}`
+    let shareUrl;
+
+    if (where === 'members')
+        shareUrl = ` https://fcgec.netlify.app/${slug}`
+    else
+        shareUrl = ` https://fcgec.netlify.app/${where}/${slug}`
 
     if (where === 'members')
         shareUrl = shareUrl.replace(/^/, "Check out this FCGEC member's profile!\n");
