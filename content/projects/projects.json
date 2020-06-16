@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Computer Dept Vebsite",
+        "description": "The Web App to help GEC students and faculty.",
+        "image": "https://images.unsplash.com/photo-1511226964783-53427a67e5fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
+        "members": [
+            "JuliusAlphonso",
+            "NeilBotelho",
+            "DeborahMendes",
+            "vipulchodankar"
+        ],
+        "repo": "https://github.com/engicos",
+        "tags": [
+            "reactjs",
+            "nextjs",
+            "strapi"
+        ]
+    }
+]

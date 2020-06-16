@@ -6,7 +6,7 @@
   background-repeat: none;
   background-size: cover;
 
-  padding: 2rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -53,6 +53,8 @@
 
 @media only screen and (max-width: 768px) {
   .header {
+    padding: 2rem;
+
     h1 {
       font-size: 3rem;
     }

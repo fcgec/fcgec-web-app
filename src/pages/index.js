@@ -13,7 +13,7 @@ import WhatWeDo from '../images/WhatWeDo.inline.svg'
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "intro.jpg" }) {
+      file(relativePath: { eq: "index.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -31,7 +31,8 @@ const IndexPage = () => {
         Tag="section"
         className={indexStyles.header}
         fluid={data.file.childImageSharp.fluid}
-        backgroundColor={`#131314`}
+      // backgroundColor={`#131314`}
+      // This backgroundColor is for overlay
       >
         <h1>FOSS Community GEC</h1>
         {/* <p>FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community.</p> */}

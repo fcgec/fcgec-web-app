@@ -1,0 +1,27 @@
+.project {
+  background: $secondary-bg;
+  border-radius: 0.2rem;
+
+  a {
+    text-decoration: none;
+    color: $primary-text;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 1.5rem #000;
+    transition: all 0.3 ease-in-out;
+  }
+}
+
+.info {
+  padding: 1rem;
+  p {
+    padding-top: 0.75rem;
+  }
+}

@@ -1,0 +1,18 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+// Mobile
+@media only screen and (max-width: 450px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+  .projectsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
