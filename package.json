@@ -14,7 +14,6 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-sharp": "^2.6.9",
-    "gatsby-plugin-transition-link": "^1.18.0",
     "gatsby-remark-images": "^3.3.10",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.3.8",

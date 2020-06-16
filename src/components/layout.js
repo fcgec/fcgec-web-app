@@ -5,7 +5,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./navbar"
 import Footer from "./footer"
 
+// Global styles
 import "../styles/style.scss"
+
 import layoutStyles from './layout.module.scss'
 
 const Layout = ({ children }) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-// import Layout from '../components/layout'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TemplateButtons from '../components/buttons/templateButtons'
 
@@ -32,7 +32,7 @@ const Blog = props => {
         fields: { slug } } = markdownRemark;
 
     return (
-        <div>
+        <Layout>
             <SEO title={title}
                 description={excerpt}
             />
@@ -50,7 +50,7 @@ const Blog = props => {
                 </div>
                 <TemplateButtons where="blog" slug={slug} />
             </div>
-        </div>
+        </Layout>
     )
 }
 

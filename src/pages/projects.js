@@ -1,11 +1,10 @@
 import React from "react"
-// import { Link } from "gatsby"
 
-// import Layout from "../components/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ProjectsPage = () => (
-    <div>
+    <Layout>
         <SEO title="Projects"
             description="Projects built by members of FOSS Community GEC."
         />
@@ -16,7 +15,7 @@ const ProjectsPage = () => (
         <div className="container">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, aut. Maiores autem doloremque quos, voluptate aliquid perspiciatis necessitatibus unde corrupti nulla blanditiis, voluptas veritatis ad architecto temporibus quisquam officia in.</p>
         </div>
-    </div>
+    </Layout>
 )
 
 export default ProjectsPage

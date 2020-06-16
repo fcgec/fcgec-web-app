@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Link from 'gatsby-plugin-transition-link/AniLink'
+import { graphql, useStaticQuery, Link } from "gatsby"
 
-// import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 import BlogStyles from './blog.module.scss'
 
@@ -33,7 +32,7 @@ const BlogPage = () => {
     `)
 
     return (
-        <div>
+        <Layout>
             <SEO title="Blog"
                 description="Blog posts by members of FOSS Community GEC."
             />
@@ -47,7 +46,7 @@ const BlogPage = () => {
                     {data.allMarkdownRemark.edges.map(edge => {
                         return (
                             <div key={edge.node.fields.slug} className={BlogStyles.post}>
-                                <Link cover direction="up" bg="#131314" duration={0.5} to={`/blog/${edge.node.fields.slug}`}>
+                                <Link to={`/blog/${edge.node.fields.slug}`}>
                                     <h3>{edge.node.frontmatter.title}</h3>
                                     <p>{edge.node.frontmatter.date}</p>
                                     <p>By {edge.node.frontmatter.author}</p>
@@ -58,7 +57,7 @@ const BlogPage = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
-import Link from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 
 import footerStyles from './footer.module.scss'
 

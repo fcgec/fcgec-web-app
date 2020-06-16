@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Link from 'gatsby-plugin-transition-link/AniLink'
+import { graphql, useStaticQuery, Link } from "gatsby"
 
-// import Layout from "../components/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import eventStyles from './events.module.scss'
@@ -47,7 +46,7 @@ const EventsPage = () => {
 	const [newEvents, oldEvents] = partition(data.allMarkdownRemark.edges, edge => new Date(edge.node.frontmatter.date) > Date.now())
 
 	return (
-		<div>
+		<Layout>
 			<SEO title="Events"
 				description="Workshops and Events by FOSS Community GEC."
 			/>
@@ -61,7 +60,7 @@ const EventsPage = () => {
 					<div className={eventStyles.eventsGrid}>
 						{newEvents.map(edge => (
 							<div key={edge.node.id} className={eventStyles.event}>
-								<Link cover direction="up" bg="#131314" duration={0.5} to={`/events/${edge.node.fields.slug}`}>
+								<Link to={`/events/${edge.node.fields.slug}`}>
 									<h4>{edge.node.frontmatter.title}</h4>
 									<p>{edge.node.frontmatter.date}</p>
 									<p>{edge.node.excerpt}</p>
@@ -78,7 +77,7 @@ const EventsPage = () => {
 					<div className={eventStyles.eventsGrid}>
 						{oldEvents.map(edge => (
 							<div key={edge.node.id} className={eventStyles.event}>
-								<Link cover direction="up" bg="#131314" duration={0.5} to={`/events/${edge.node.fields.slug}`}>
+								<Link to={`/events/${edge.node.fields.slug}`}>
 									<h4>{edge.node.frontmatter.title}</h4>
 									<p>{edge.node.frontmatter.date}</p>
 									<p>By {edge.node.frontmatter.author}</p>
@@ -89,7 +88,7 @@ const EventsPage = () => {
 					</div>
 				}
 			</div>
-		</div >
+		</Layout >
 	)
 }
 

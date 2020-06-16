@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-// import Layout from '../components/layout'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TemplateButtons from '../components/buttons/templateButtons'
 
@@ -32,7 +32,7 @@ const Member = props => {
 
 
     return (
-        <div>
+        <Layout>
             <SEO title={name}
                 description={`View ${name}'s profile at FOSS Community GEC. Find their links and information here.`}
             />
@@ -74,7 +74,7 @@ const Member = props => {
                 </div>
                 <TemplateButtons where="members" slug={`@${github}`} />
             </div>
-        </div>
+        </Layout>
     )
 }
 

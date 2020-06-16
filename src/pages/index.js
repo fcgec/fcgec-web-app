@@ -1,17 +1,17 @@
 import React from "react"
-// import { Link } from "gatsby"
 
-// import Layout from "../components/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
+
 import indexStyles from './index.module.scss'
+
 import WhoWeAre from '../images/WhoWeAre.inline.svg'
 import WhatWeDo from '../images/WhatWeDo.inline.svg'
 
 const IndexPage = () => {
 
   return (
-    // <Layout>
-    <div>
+    <Layout>
       <SEO title="Home" />
 
       <section className={indexStyles.header}>
@@ -40,8 +40,7 @@ const IndexPage = () => {
           <WhatWeDo />
         </div>
       </section>
-    </div>
-
+    </Layout>
   )
 }
 
