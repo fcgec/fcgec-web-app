@@ -22,21 +22,17 @@ const MemberCard = ({ name, image, github, twitter, website, linkedin }) => {
                     <h3>{name}</h3>
 
                     <div className={memberCardStyles.links}>
-                        {github ? <a href={`https://github.com/${github}`}
-                            aria-label={`Link to ${name}'s GitHub Profile`}>
-                            <GitHubIcon className={memberCardStyles.svgColor} /></a> : ``}
+                        {github ? <span>
+                            <GitHubIcon className={memberCardStyles.svgColor} /></span> : ``}
 
-                        {twitter ? <a href={`https://twitter.com/${twitter}`}
-                            aria-label={`Link to ${name}'s Twitter Profile`}>
-                            <TwitterIcon className={memberCardStyles.svgColor} /></a> : ``}
+                        {twitter ? <span>
+                            <TwitterIcon className={memberCardStyles.svgColor} /></span> : ``}
 
-                        {linkedin ? <a href={`https://linkedin.com/in/${linkedin}`}
-                            aria-label={`Link to ${name}'s LinkedIn Profile`}>
-                            <LinkedInIcon className={memberCardStyles.svgColor} /></a> : ``}
+                        {linkedin ? <span>
+                            <LinkedInIcon className={memberCardStyles.svgColor} /></span> : ``}
 
-                        {website ? <a href={website}
-                            aria-label={`Link to ${name}'s Website`}>
-                            <WebsiteIcon className={memberCardStyles.svgColor} /></a> : ``}
+                        {website ? <span>
+                            <WebsiteIcon className={memberCardStyles.svgColor} /></span> : ``}
                     </div>
 
                 </div>

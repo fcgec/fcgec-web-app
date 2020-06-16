@@ -1,0 +1,27 @@
+.imageWithText {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .image {
+    margin: 0 auto;
+  }
+
+  .text {
+    margin: 0 auto;
+    padding: 1rem;
+
+    p {
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .imageWithText {
+    grid-template-columns: 1fr;
+
+    .text {
+      order: 1;
+    }
+  }
+}

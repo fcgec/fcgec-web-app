@@ -10,7 +10,7 @@ import membersStyles from './members.module.scss'
 const MembersPage = () => {
   const data = useStaticQuery(graphql`
     	query {
-    	  allMembersJson {
+    	  allMembersJson(sort: {fields: [name], order: ASC}) {
     	    edges {
     	      node {
     	        id,

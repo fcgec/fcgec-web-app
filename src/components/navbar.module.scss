@@ -80,7 +80,34 @@
   color: $accent;
 }
 
+.social {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+.linkSvg {
+  @extend .svgColor;
+  height: 1.5rem;
+
+  &:hover {
+    filter: none;
+  }
+}
+
+.linkIcon {
+  border-radius: 50%;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .social {
+    display: none;
+  }
+
   .header {
     position: fixed;
     bottom: 0;
