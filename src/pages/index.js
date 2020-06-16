@@ -1,7 +1,9 @@
 import React from "react"
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BackgroundImage from 'gatsby-background-image'
 
 import indexStyles from './index.module.scss'
 
@@ -9,15 +11,32 @@ import WhoWeAre from '../images/WhoWeAre.inline.svg'
 import WhatWeDo from '../images/WhatWeDo.inline.svg'
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "intro.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <Layout>
       <SEO title="Home" />
 
-      <section className={indexStyles.header}>
+      <BackgroundImage
+        Tag="section"
+        className={indexStyles.header}
+        fluid={data.file.childImageSharp.fluid}
+        backgroundColor={`#131314`}
+      >
         <h1>FOSS Community GEC</h1>
-        <p>FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community.</p>
-      </section>
+        {/* <p>FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community.</p> */}
+      </BackgroundImage>
+
 
       <section className={indexStyles.imageWithText}>
         <div className={indexStyles.image}>
@@ -40,7 +59,7 @@ const IndexPage = () => {
           <WhatWeDo />
         </div>
       </section>
-    </Layout>
+    </Layout >
   )
 }
 

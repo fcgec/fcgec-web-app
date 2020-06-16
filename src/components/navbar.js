@@ -25,7 +25,7 @@ const Navbar = ({ siteTitle, location }) => {
       file(relativePath: { eq: "FCGEC.png" }) {
         childImageSharp {
           fluid(maxHeight: 150) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
