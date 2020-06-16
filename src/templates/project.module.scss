@@ -1,0 +1,79 @@
+.projectContainer {
+  // max-width: 960px;
+  margin: 0 auto;
+}
+
+.project {
+  padding: 1rem 0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 0;
+  gap: 2rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    padding: 1rem 0;
+  }
+
+  a {
+    color: $primary-text;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 3px solid $accent;
+    border-radius: 0.2rem;
+
+    &:hover {
+      background: $accent;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  ul {
+    padding: 1rem 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      background: $secondary-bg;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+.membersGrid {
+  display: grid;
+  padding: 1rem 0;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+// Mobile
+@media only screen and (max-width: 768px) {
+  .membersGrid,
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium Displays
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .membersGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

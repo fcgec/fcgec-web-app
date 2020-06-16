@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,14 +18,15 @@ const ProjectsPage = () => {
     	                id,
                         name,
                         description,
-                        image
+                        image,
+                        fields {
+                            slug
+                        }
     	            }
     	        }   
     	    }
     	}
   `)
-
-    console.log(data)
 
     return (
         <Layout>
@@ -39,12 +40,9 @@ const ProjectsPage = () => {
             <div className="container">
                 <div className={projectsStyles.projectsGrid}>
                     {data.allProjectsJson.edges.length ? data.allProjectsJson.edges.map(edge => (
-                        <ProjectCard {...edge.node} key={edge.node.id} />
+                        <ProjectCard {...edge.node} {...edge.node.fields} key={edge.node.id} />
                     ))
                         : <h3>No projects found, that's embarrassing...</h3>}
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
                 </div>
             </div>
         </Layout>

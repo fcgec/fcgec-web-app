@@ -9,9 +9,9 @@ exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions;
 
     if (node.internal.type === 'MarkdownRemark') {
-        const slug = path.basename(node.fileAbsolutePath, '.md');
+        const slug = path.basename(node.fileAbsolutePath, '.md').toLowerCase();
 
-        // Add slug field
+        // Add slug field for every markdown file
         createNodeField({
             node,
             name: 'slug',
@@ -32,6 +32,16 @@ exports.onCreateNode = ({ node, actions }) => {
                 value: 'event'
             });
         }
+    } else if (node.internal.type === 'ProjectsJson') {
+        // Get slug by replacing space in name with -
+        const slug = node.name.replace(/\s+/g, '-').toLowerCase();
+
+        // Add slug field for project object
+        createNodeField({
+            node,
+            name: 'slug',
+            value: slug
+        });
     }
 };
 
@@ -40,7 +50,8 @@ exports.createPages = ({ graphql, actions }) => {
 
     return Promise.all([
         createBlogPage(createPage, graphql),
-        createMemberPage(createPage, graphql)
+        createMemberPage(createPage, graphql),
+        createProjectPage(createPage, graphql)
     ]);
 
 };
@@ -111,6 +122,37 @@ const createMemberPage = async (createPage, graphql) => {
             path: `/@${edge.node.github}`,
             context: {
                 github: edge.node.github
+            }
+        })
+    })
+}
+
+const createProjectPage = async (createPage, graphql) => {
+    const projectTemplate = path.resolve('./src/templates/project.js');
+
+    // To fetch github username of the member
+    const res = await graphql(`
+        query {
+            allProjectsJson {
+                edges {
+                    node {
+                        members,
+                        fields {
+                            slug
+                        }
+                    }
+                }   
+            }
+        }
+    `)
+
+    res.data.allProjectsJson.edges.forEach(edge => {
+        createPage({
+            component: projectTemplate,
+            path: `/project/${edge.node.fields.slug}`,
+            context: {
+                slug: edge.node.fields.slug,
+                members: edge.node.members
             }
         })
     })

@@ -18,6 +18,8 @@ const TemplateButtons = ({ where, slug }) => {
         shareUrl = shareUrl.replace(/^/, "Check out this Blog post on FOSS Community GEC!\n");
     else if (where === 'events')
         shareUrl = shareUrl.replace(/^/, "Check out this Event on FOSS Community GEC!\n");
+    else if (where === 'project')
+        shareUrl = shareUrl.replace(/^/, "Check out this Project on FOSS Community GEC!\n");
 
     return (
         <div className={templateButtonsStyles.buttons}>

@@ -15,13 +15,13 @@ const checkDescription = text => {
         return "Project description not found";
 }
 
-const ProjectCard = ({ name, description, image }) => {
+const ProjectCard = ({ name, description, image, slug }) => {
     let descriptionToRender = checkDescription(description);
 
     return (
         <div className={projectCardStyles.project}>
-            <Link to="/projects/">
-                <img src={image || "https://source.unsplash.com/321x240/?tech"} alt={name} loading="lazy" />
+            <Link to={`/project/${slug}`}>
+                <img src={image || "https://source.unsplash.com/450x337.5/?tech"} alt={name} loading="lazy" />
                 <div className={projectCardStyles.info}>
                     <h3>{name || "Project name not found"}</h3>
                     <p>{descriptionToRender}</p>
