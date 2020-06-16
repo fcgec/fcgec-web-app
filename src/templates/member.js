@@ -37,42 +37,44 @@ const Member = props => {
                 description={`View ${name}'s profile at FOSS Community GEC. Find their links and information here.`}
             />
             <div className="container">
-                <div className={memberStyles.member}>
-                    {
-                        image ?
-                            <img src={image} alt={name} />
-                            : <UserIcon className={memberStyles.svgProfile} />
-                    }
-                    <div className={memberStyles.info}>
-                        <h2>{name}</h2>
-                        <div className={memberStyles.links}>
-                            {github ? <a href={`https://github.com/${github}`}
-                                aria-label={`Link to ${name}'s GitHub Profile`}>
-                                <GitHubIcon className={memberStyles.svgColor} />
-                                <p>GitHub</p>
-                            </a> : ``}
+                <div className={memberStyles.memberContainer}>
+                    <div className={memberStyles.member}>
+                        {
+                            image ?
+                                <img src={image} alt={name} />
+                                : <UserIcon className={memberStyles.svgProfile} />
+                        }
+                        <div className={memberStyles.info}>
+                            <h2>{name}</h2>
+                            <div className={memberStyles.links}>
+                                {github ? <a href={`https://github.com/${github}`}
+                                    aria-label={`Link to ${name}'s GitHub Profile`}>
+                                    <GitHubIcon className={memberStyles.svgColor} />
+                                    <p>GitHub</p>
+                                </a> : ``}
 
-                            {twitter ? <a href={`https://twitter.com/${twitter}`}
-                                aria-label={`Link to ${name}'s Twitter Profile`}>
-                                <TwitterIcon className={memberStyles.svgColor} />
-                                <p> Twitter</p>
-                            </a> : ``}
+                                {twitter ? <a href={`https://twitter.com/${twitter}`}
+                                    aria-label={`Link to ${name}'s Twitter Profile`}>
+                                    <TwitterIcon className={memberStyles.svgColor} />
+                                    <p> Twitter</p>
+                                </a> : ``}
 
-                            {linkedin ? <a href={`https://twitter.com/in/${linkedin}`}
-                                aria-label={`Link to ${name}'s LinkedIn Profile`}>
-                                <LinkedInIcon className={memberStyles.svgColor} />
-                                <p> LinkedIn</p>
-                            </a> : ``}
+                                {linkedin ? <a href={`https://twitter.com/in/${linkedin}`}
+                                    aria-label={`Link to ${name}'s LinkedIn Profile`}>
+                                    <LinkedInIcon className={memberStyles.svgColor} />
+                                    <p> LinkedIn</p>
+                                </a> : ``}
 
-                            {website ? <a href={website}
-                                aria-label={`Link to ${name}'s Website`}>
-                                <WebsiteIcon className={memberStyles.svgColor} />
-                                <p> Website</p>
-                            </a> : ``}
+                                {website ? <a href={website}
+                                    aria-label={`Link to ${name}'s Website`}>
+                                    <WebsiteIcon className={memberStyles.svgColor} />
+                                    <p> Website</p>
+                                </a> : ``}
+                            </div>
                         </div>
                     </div>
+                    <TemplateButtons where="members" slug={`@${github}`} />
                 </div>
-                <TemplateButtons where="members" slug={`@${github}`} />
             </div>
         </Layout>
     )

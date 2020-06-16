@@ -48,8 +48,9 @@ const Blog = props => {
                     <div className="container">
                         <div className={eventStyles.content} dangerouslySetInnerHTML={{ __html: html }}></div>
                     </div>
+
+                    <TemplateButtons where="events" slug={slug} />
                 </div>
-                <TemplateButtons where="events" slug={slug} />
             </div>
         </Layout>
     )

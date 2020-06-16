@@ -1,9 +1,9 @@
 .buttons {
-  max-width: 600px;
+  max-width: inherit;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .share {
@@ -12,7 +12,11 @@
   flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 359px) {
+@media only screen and (max-width: 340px) {
+  .buttons {
+    justify-content: center;
+  }
+
   .share {
     margin-top: 1.5rem;
   }

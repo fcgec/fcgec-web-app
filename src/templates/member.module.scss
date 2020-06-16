@@ -1,5 +1,9 @@
-.member {
+.memberContainer {
   max-width: 600px;
+  margin: 0 auto;
+}
+
+.member {
   padding: 3rem;
   margin: 0 auto;
   display: grid;
