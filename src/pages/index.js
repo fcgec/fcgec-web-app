@@ -45,7 +45,6 @@ const IndexPage = () => {
         </div>
         <div className={indexStyles.text}>
           <h2>Who we are</h2>
-          <br>
           <p>We're a bunch of people who love free and open source software. We created this community to connect with other FOSS enthusiasts both in our college and beyond. Everyone is welcome at our events from 1st year college students to working professionals.</p>
         </div>
       </section>
@@ -53,8 +52,6 @@ const IndexPage = () => {
       <section className={indexStyles.imageWithText}>
         <div className={indexStyles.text}>
           <h2>What we do</h2>
-          <br>
-          <br>
           <p>We strive to nurture the open source community in our college and encourage students across Goa to contribute to open source software projects and adopt the FOSS.</p>
           <p>We also regularly organise workshops and talks on various Open source technologies and projects. So keep an eye on our Events page to for upcoming programs.</p>
         </div>

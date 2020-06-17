@@ -43,7 +43,11 @@
 
   .text {
     margin: 0 auto;
-    padding: 3rem;
+    padding: 4rem;
+
+    h2 {
+      padding: 1rem 0;
+    }
 
     p {
       padding: 0.5rem 0;
@@ -67,6 +71,7 @@
     grid-template-columns: 1fr;
 
     .text {
+      padding: 2rem;
       order: 1;
     }
   }
