@@ -45,7 +45,7 @@ const Blog = props => {
                         <p>{timeToRead} min read · {date}</p>
                     </div>
 
-                    <div className="container">
+                    <div className={eventStyles.contentContainer}>
                         <div className={eventStyles.content} dangerouslySetInnerHTML={{ __html: html }}></div>
                     </div>
 
