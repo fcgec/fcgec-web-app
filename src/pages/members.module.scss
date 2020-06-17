@@ -6,46 +6,6 @@
   padding: 1rem 0;
 }
 
-.search {
-  padding: 1rem 0;
-
-  p {
-    padding: 0.5rem 0;
-  }
-
-  input {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.2rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  button {
-    background: $primary-bg;
-    color: $primary-text;
-    border: 3px solid #fff;
-    border-radius: 0.25rem;
-    padding: 0.3rem 1rem;
-    font-weight: 600;
-
-    &:hover {
-      cursor: pointer;
-      background: #fff;
-      color: #212121;
-      transition: all 0.3s ease-in-out;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
 // Mobile
 @media only screen and (max-width: 768px) {
   .membersGrid {

@@ -3,7 +3,9 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import SearchBox from "../components/searchBox"
 import MemberCard from "../components/members/memberCard"
+
 
 import membersStyles from './members.module.scss'
 
@@ -73,28 +75,14 @@ const MembersPage = () => {
       </section>
 
       <div className="container">
-        <div className={membersStyles.search}>
-          <p>Search By Name</p>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleChange}
-            aria-label="Input to search for members via name"
-          />
-          <button
-            onClick={reset}
-            aria-label="Button to reset search query"
-          >
-            Reset
-          </button>
-        </div>
+        <SearchBox name={name} handleChange={handleChange} reset={reset} />
+
         <div className={membersStyles.membersGrid}>
           {name === '' ? members.map(member => (
             <MemberCard key={member.node.id} {...member.node} />
           )) : search.length !== 0 ? search.map(member => (
             <MemberCard key={member.node.id} {...member.node} />
-          )) : <h3>Couldn't find "{name}"</h3>}
+          )) : <h3>Couldn't find member: "{name}"</h3>}
         </div>
       </div>
     </Layout>
