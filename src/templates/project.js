@@ -78,7 +78,7 @@ const Project = ({ data, pageContext }) => {
                         </div>
 
                     </div>
-                    <TemplateButtons where="project" slug={slug} />
+                    <TemplateButtons where="projects" slug={slug} />
                 </div>
             </div>
         </Layout>
