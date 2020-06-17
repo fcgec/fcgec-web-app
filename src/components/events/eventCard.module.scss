@@ -1,0 +1,18 @@
+.event {
+  background: $secondary-bg;
+  padding: 0.75rem;
+  border-radius: 0.2rem;
+  a {
+    color: $primary-text;
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem #000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  p {
+    padding: 0.2rem 0;
+  }
+}

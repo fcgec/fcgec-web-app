@@ -2,10 +2,10 @@ import React from 'react'
 
 import searchBoxStyles from './searchBox.module.scss'
 
-const SearchBox = ({ name, handleChange, reset }) => {
+const SearchBox = ({ name, handleChange, reset, what }) => {
     return (
         <div className={searchBoxStyles.searchBox}>
-            <p>Search By Name</p>
+            <p>Search {what} By Name</p>
             <input
                 type="text"
                 name="name"

@@ -1,8 +1,10 @@
-import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import SearchBox from "../components/searchBox"
+import BlogPost from "../components/blog/blogPost"
 
 import BlogStyles from './blog.module.scss'
 
@@ -31,6 +33,42 @@ const BlogPage = () => {
         }
     `)
 
+    const [posts,] = useState(data.allMarkdownRemark.edges);
+    const [name, setName] = useState('');
+    const [search, setSearch] = useState([]);
+
+    // Function to handle search, might not be the most efficient
+    // But it gets the job done for now
+    const handleChange = event => {
+        // Update value of name
+        setName(event.target.value);
+        // Reset search
+        setSearch([]);
+
+        // If no search term then, show all
+        if (event.target.value.length === 0) {
+            setSearch([]);
+        } else {
+            // If search term then
+            posts.forEach(post => {
+                // Check if name matches members' name
+                if (new RegExp(name, 'gi').test(post.node.frontmatter.title)) {
+                    // if matched, add to search array
+                    setSearch(prevArray => [...prevArray, post]);
+                }
+            })
+        }
+    }
+
+    const reset = () => {
+        // Rest Input if not empty
+        if (name !== '')
+            setName('');
+        // Reset searched members only if not empty
+        if (search.length !== 0)
+            setSearch([]);
+    }
+
     return (
         <Layout>
             <SEO title="Blog"
@@ -42,19 +80,30 @@ const BlogPage = () => {
             </section>
 
             <div className="container">
+                <SearchBox
+                    name={name}
+                    handleChange={handleChange}
+                    reset={reset}
+                    what="Blog Posts"
+                />
+
                 <div className={BlogStyles.postGrid}>
-                    {data.allMarkdownRemark.edges.map(edge => {
-                        return (
-                            <div key={edge.node.fields.slug} className={BlogStyles.post}>
-                                <Link to={`/blog/${edge.node.fields.slug}`}>
-                                    <h3>{edge.node.frontmatter.title}</h3>
-                                    <p>{edge.node.frontmatter.date}</p>
-                                    <p>By {edge.node.frontmatter.author}</p>
-                                    <p>{edge.node.excerpt}</p>
-                                </Link>
-                            </div>
-                        )
-                    })}
+                    {name === '' ? posts.map(post => (
+                        <BlogPost
+                            key={post.node.fields.slug}
+                            {...post.node}
+                            {...post.node.frontmatter}
+                            {...post.node.fields}
+
+                        />
+                    )) : search.length !== 0 ? search.map(post => (
+                        <BlogPost
+                            key={post.node.fields.slug}
+                            {...post.node}
+                            {...post.node.frontmatter}
+                            {...post.node.fields}
+                        />
+                    )) : <h3>Couldn't find post: "{name}"</h3>}
                 </div>
             </div>
         </Layout>

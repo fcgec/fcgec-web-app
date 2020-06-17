@@ -75,7 +75,12 @@ const ProjectsPage = () => {
             </section>
 
             <div className="container">
-                <SearchBox name={name} handleChange={handleChange} reset={reset} />
+                <SearchBox
+                    name={name}
+                    handleChange={handleChange}
+                    reset={reset}
+                    what="Projects"
+                />
 
                 <div className={projectsStyles.projectsGrid}>
                     {name === '' ? projects.map(project => (

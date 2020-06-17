@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SearchBox from "../components/searchBox"
+import EventCard from "../components/events/eventCard"
 
 import eventStyles from './events.module.scss'
 
@@ -16,7 +17,6 @@ const EventsPage = () => {
 			) {
                 edges {
                     node {
-						id
                         frontmatter {
                             title
                             date
@@ -94,14 +94,13 @@ const EventsPage = () => {
 				<h3 className={eventStyles.whichEvent}>Upcoming Events</h3>
 				{!newEvents.length ? <h4 className={eventStyles.checkEvent}>No upcoming events.</h4> :
 					<div className={eventStyles.eventsGrid}>
-						{newEvents.map(edge => (
-							<div key={edge.node.id} className={eventStyles.event}>
-								<Link to={`/events/${edge.node.fields.slug}`}>
-									<h4>{edge.node.frontmatter.title}</h4>
-									<p>{edge.node.frontmatter.date}</p>
-									<p>{edge.node.excerpt}</p>
-								</Link>
-							</div>
+						{newEvents.map(event => (
+							<EventCard
+								key={event.node.fields.slug}
+								{...event.node}
+								{...event.node.frontmatter}
+								{...event.node.fields}
+							/>
 						))}
 					</div>
 				}
@@ -109,28 +108,29 @@ const EventsPage = () => {
 
 			<div className="container">
 				<h3 className={eventStyles.whichEvent}>Past Events</h3>
-				<SearchBox name={name} handleChange={handleChange} reset={reset} />
-
+				<SearchBox
+					name={name}
+					handleChange={handleChange}
+					reset={reset}
+					what="Events"
+				/>
 
 				<div className={eventStyles.eventsGrid}>
-					{name === '' ? oldEvents.map(edge => (
-						<div key={edge.node.id} className={eventStyles.event}>
-							<Link to={`/events/${edge.node.fields.slug}`}>
-								<h4>{edge.node.frontmatter.title}</h4>
-								<p>{edge.node.frontmatter.date}</p>
-								<p>By {edge.node.frontmatter.author}</p>
-								<p>{edge.node.excerpt}</p>
-							</Link>
-						</div>
-					)) : search.length !== 0 ? search.map(edge => (
-						<div key={edge.node.id} className={eventStyles.event}>
-							<Link to={`/events/${edge.node.fields.slug}`}>
-								<h4>{edge.node.frontmatter.title}</h4>
-								<p>{edge.node.frontmatter.date}</p>
-								<p>By {edge.node.frontmatter.author}</p>
-								<p>{edge.node.excerpt}</p>
-							</Link>
-						</div>)) : <h4>Couldn't find Event: "{name}"</h4>}
+					{name === '' ? oldEvents.map(event => (
+						<EventCard
+							key={event.node.fields.slug}
+							{...event.node}
+							{...event.node.frontmatter}
+							{...event.node.fields}
+						/>
+					)) : search.length !== 0 ? search.map(event => (
+						<EventCard
+							key={event.node.fields.slug}
+							{...event.node}
+							{...event.node.frontmatter}
+							{...event.node.fields}
+						/>
+					)) : <h4>Couldn't find Event: "{name}"</h4>}
 				</div>
 
 			</div>

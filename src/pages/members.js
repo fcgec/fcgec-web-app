@@ -75,7 +75,12 @@ const MembersPage = () => {
       </section>
 
       <div className="container">
-        <SearchBox name={name} handleChange={handleChange} reset={reset} />
+        <SearchBox
+          name={name}
+          handleChange={handleChange}
+          reset={reset}
+          what="Members"
+        />
 
         <div className={membersStyles.membersGrid}>
           {name === '' ? members.map(member => (
