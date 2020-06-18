@@ -103,6 +103,14 @@
   }
 }
 
+@media only screen and (min-width: 769px) {
+  .social {
+    width: inherit;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .social {
     display: none;
@@ -150,8 +158,8 @@
 
 // Not sure how i want it to appear on very large displays
 // Currently centering the content
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1920px) {
   .header {
-    left: calc(50vw - 800px);
+    left: calc(50vw - 960px);
   }
 }
