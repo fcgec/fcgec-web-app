@@ -35,7 +35,6 @@ const IndexPage = () => {
       // This backgroundColor is for overlay
       >
         <h1>FOSS Community GEC</h1>
-        {/* <p>FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community.</p> */}
       </BackgroundImage>
 
 
