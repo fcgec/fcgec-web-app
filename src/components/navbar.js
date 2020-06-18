@@ -66,14 +66,19 @@ const Navbar = ({ siteTitle, location }) => {
             <HomeIcon className={navbarStyles.svgColor} /> <p>Home</p>
           </Link>
         </li>
-        <li>
-          <Link activeStyle={activeLinkStyles} to="/events">
-            <EventsIcon className={navbarStyles.svgColor} /> <p>Events</p>
+        <li className={navbarStyles.hide}>
+          <Link activeStyle={activeLinkStyles} to="/about">
+            <AboutIcon className={navbarStyles.svgColor} /> <p>About</p>
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/about">
-            <AboutIcon className={navbarStyles.svgColor} /> <p>About</p>
+          <Link activeStyle={activeLinkStyles} to="/blog">
+            <BlogIcon className={navbarStyles.svgColor} /> <p>Blog</p>
+          </Link>
+        </li>
+        <li>
+          <Link activeStyle={activeLinkStyles} to="/events">
+            <EventsIcon className={navbarStyles.svgColor} /> <p>Events</p>
           </Link>
         </li>
         <li>
@@ -84,11 +89,6 @@ const Navbar = ({ siteTitle, location }) => {
         <li>
           <Link activeStyle={activeLinkStyles} to="/projects">
             <ProjectsIcon className={navbarStyles.svgColor} /> <p>Projects</p>
-          </Link>
-        </li>
-        <li>
-          <Link activeStyle={activeLinkStyles} to="/blog">
-            <BlogIcon className={navbarStyles.svgColor} /> <p>Blog</p>
           </Link>
         </li>
       </ul>
