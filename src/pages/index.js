@@ -25,7 +25,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home | FOSS Club GEC" />
 
       <BackgroundImage
         Tag="section"

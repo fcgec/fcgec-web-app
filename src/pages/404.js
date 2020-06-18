@@ -22,7 +22,7 @@ const NotFoundPage = () => {
 
   return (
     <Layout>
-      <SEO title="404: Not found"
+      <SEO title="404: Not found | FOSS Club GEC"
         description="Page not found. FOSS Club GEC."
       />
       <BackgroundImage

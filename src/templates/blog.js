@@ -33,7 +33,7 @@ const Blog = props => {
 
     return (
         <Layout>
-            <SEO title={title}
+            <SEO title={`${title} | FOSS Club GEC`}
                 description={`Blog post by ${author} | ` + excerpt}
             />
             <div className="container">

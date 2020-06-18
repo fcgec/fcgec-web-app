@@ -24,7 +24,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About"
+      <SEO title="About | FOSS Club GEC"
         description="View the origin and story about the FOSS Club GEC. 
         Click to find out more."
       />
