@@ -34,7 +34,7 @@ const Blog = props => {
 
     return (
         <Layout>
-            <SEO title={`${title} | FOSS Club GEC`}
+            <SEO title={title}
                 description={excerpt}
             />
             <div className="container">

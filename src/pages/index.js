@@ -25,7 +25,9 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home | FOSS Club GEC" />
+      <SEO title="Home"
+        meta={[{ name: "google-site-verification", content: "phnLHAMpXE4CDnqbdrZyzM0X17TExa8fAsClH3kY7Fc" }]}
+      />
 
       <BackgroundImage
         Tag="section"

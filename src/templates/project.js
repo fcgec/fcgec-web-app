@@ -48,7 +48,7 @@ const Project = ({ data, pageContext }) => {
 
     return (
         <Layout>
-            <SEO title={`${title} | FOSS Club GEC`}
+            <SEO title={name}
                 description={`View the ${name} project made by members of FOSS Club GEC. Find their links and information here.`}
             />
             <div className="container">

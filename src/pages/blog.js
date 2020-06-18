@@ -71,7 +71,7 @@ const BlogPage = () => {
 
     return (
         <Layout>
-            <SEO title="Blog | FOSS Club GEC"
+            <SEO title="Blog"
                 description="View the Blog posts by members of FOSS Club GEC. 
                 Click to find out more."
             />

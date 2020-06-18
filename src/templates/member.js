@@ -33,7 +33,7 @@ const Member = props => {
 
     return (
         <Layout>
-            <SEO title={`${title} | FOSS Club GEC`}
+            <SEO title={name}
                 description={`View ${name}'s profile at FOSS Club GEC. Find their links and information here.`}
             />
             <div className="container">

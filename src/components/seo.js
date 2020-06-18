@@ -86,3 +86,5 @@ SEO.propTypes = {
 }
 
 export default SEO
+
+  // < meta name =  content =  />

@@ -67,7 +67,7 @@ const ProjectsPage = () => {
 
     return (
         <Layout>
-            <SEO title="Projects | FOSS Club GEC"
+            <SEO title="Projects"
                 description="View the projects built by members of FOSS Club GEC. Click to find out more."
             />
             <section className="pageTitle">
