@@ -59,7 +59,7 @@ const Member = props => {
                                     <p> Twitter</p>
                                 </a> : ``}
 
-                                {linkedin ? <a href={`https://twitter.com/in/${linkedin}`}
+                                {linkedin ? <a href={`https://linkedin.com/in/${linkedin}`}
                                     aria-label={`Link to ${name}'s LinkedIn Profile`}>
                                     <LinkedInIcon className={memberStyles.svgColor} />
                                     <p> LinkedIn</p>

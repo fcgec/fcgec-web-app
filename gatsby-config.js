@@ -51,7 +51,7 @@ module.exports = {
               maxWidth: 400,
               linkImagesToOriginal: false,
               withWebp: true,
-              wrapperStyle: "margin: 0"
+              // wrapperStyle: "margin: 0"
             }
           }
         ],

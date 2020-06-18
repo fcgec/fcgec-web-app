@@ -1,6 +1,6 @@
 ---
 title: "Linux Installfest 2019"
-date: "2019-08-2"
+date: "2019-08-02"
 author: "Vipul Chodankar"
 ---
 
