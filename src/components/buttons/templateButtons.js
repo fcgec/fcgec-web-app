@@ -13,18 +13,18 @@ const TemplateButtons = ({ where, slug }) => {
     let shareUrl;
 
     if (where === 'members')
-        shareUrl = ` https://fcgec.netlify.app/${slug}`
+        shareUrl = ` https://gecfoss.club/${slug}`
     else
-        shareUrl = ` https://fcgec.netlify.app/${where}/${slug}`
+        shareUrl = ` https://gecfoss.club/${where}/${slug}`
 
     if (where === 'members')
         shareUrl = shareUrl.replace(/^/, "Check out this FCGEC member's profile!\n");
     else if (where === 'blog')
-        shareUrl = shareUrl.replace(/^/, "Check out this Blog post on FOSS Community GEC!\n");
+        shareUrl = shareUrl.replace(/^/, "Check out this Blog post on FOSS Club GEC!\n");
     else if (where === 'events')
-        shareUrl = shareUrl.replace(/^/, "Check out this Event on FOSS Community GEC!\n");
+        shareUrl = shareUrl.replace(/^/, "Check out this Event on FOSS Club GEC!\n");
     else if (where === 'projects')
-        shareUrl = shareUrl.replace(/^/, "Check out this Project on FOSS Community GEC!\n");
+        shareUrl = shareUrl.replace(/^/, "Check out this Project on FOSS Club GEC!\n");
 
     return (
         <div className={templateButtonsStyles.buttons}>

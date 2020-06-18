@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `FOSS Community GEC`,
-    description: `The Beta Website of The Foss Community GEC. FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community in Goa College of Engineering and encourage students across Goa to contribute to open source software projects and adopt the FOSS philosophy.`,
+    title: `FOSS Club GEC`,
+    description: `The Official Webapp of The FOSS Club GEC. FOSS Club GEC is a club started by a group of FOSS enthusiasts to nurture the open source Club in Goa College of Engineering and encourage students across Goa to contribute to open source software projects and adopt the FOSS philosophy.`,
     author: `FCGEC`,
   },
   plugins: [
@@ -77,7 +77,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `FOSS Community GEC`,
+        name: `FOSS Club GEC`,
         short_name: `FCGEC`,
         start_url: `/`,
         background_color: `#070813`,

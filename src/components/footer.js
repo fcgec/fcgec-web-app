@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className={footerStyles.footerEnd}>
                 <p>© {new Date().getFullYear()}
-                    <a href="https://github.com/fcgec"> FOSS Community GEC</a></p>
+                    <a href="https://github.com/fcgec"> FOSS Club GEC</a></p>
             </div>
         </footer>
     )

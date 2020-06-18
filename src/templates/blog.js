@@ -34,7 +34,7 @@ const Blog = props => {
     return (
         <Layout>
             <SEO title={title}
-                description={excerpt}
+                description={`Blog post by ${author} | ` + excerpt}
             />
             <div className="container">
                 <div className={blogStyles.container}>

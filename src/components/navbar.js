@@ -97,13 +97,13 @@ const Navbar = ({ siteTitle, location }) => {
         <a href="https://github.com/fcgec">
           <GitHubIcon className={navbarStyles.linkSvg} />
         </a>
-        <a href="https://twitter.com">
+        <a href="https://twitter.com/gecfossclubb">
           <TwitterIcon size={24} className={navbarStyles.linkIcon} />
         </a>
         <a href="https://linkedin.com">
           <LinkedinIcon size={24} className={navbarStyles.linkIcon} />
         </a>
-        <a href="https://fcgec.netlify.app">
+        <a href="https://gecfoss.club">
           <WebsiteIcon className={navbarStyles.linkSvg} />
         </a>
       </div>
@@ -116,7 +116,7 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-  siteTitle: `FOSS Community GEC`,
+  siteTitle: `FOSS Club GEC`,
 }
 
 export default Navbar

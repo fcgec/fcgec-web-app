@@ -25,7 +25,8 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About"
-        description="Find out more about FOSS Community GEC."
+        description="View the origin and story about the FOSS Club GEC. 
+        Click to find out more."
       />
       <section className="pageTitle">
         <h2>About the club</h2>
@@ -40,7 +41,7 @@ const AboutPage = () => {
           </div>
           <div className={aboutStyles.text}>
             <h2>Our Story</h2>
-            <p>FOSS community GEC is a club started by a group of FOSS enthusiasts to nurture the open source community in Goa College of Engineering and encourage students across Goa to contribute to open source software projects and adopt the FOSS philosophy.</p>
+            <p>FOSS Club GEC is a club started by a group of FOSS enthusiasts to nurture the open source Club in Goa College of Engineering and encourage students across Goa to contribute to open source software projects and adopt the FOSS philosophy.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quibusdam consectetur earum nobis vitae odit maiores repellat. Aliquam autem veritatis reiciendis aspernatur fuga repellat? Assumenda, maxime. Pariatur modi saepe blanditiis!</p>
           </div>
         </section>

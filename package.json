@@ -1,7 +1,7 @@
 {
   "name": "fcgec-webapp",
   "private": false,
-  "description": "The Beta Webapp of The Foss Community GEC.",
+  "description": "The Beta Webapp of Foss Club GEC.",
   "version": "0.1.0",
   "author": "Vipul Chodankar",
   "dependencies": {

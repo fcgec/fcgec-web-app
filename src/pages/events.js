@@ -84,7 +84,7 @@ const EventsPage = () => {
 	return (
 		<Layout>
 			<SEO title="Events"
-				description="Workshops and Events by FOSS Community GEC."
+				description="View the Workshops and Events organised and conducted by FOSS Club GEC.  Click to find out more."
 			/>
 			<section className="pageTitle">
 				<h2>Events</h2>

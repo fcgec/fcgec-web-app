@@ -49,7 +49,7 @@ const Project = ({ data, pageContext }) => {
     return (
         <Layout>
             <SEO title={`${name} Project`}
-                description={`View the ${name} project made by members of FOSS Community GEC. Find their links and information here.`}
+                description={`View the ${name} project made by members of FOSS Club GEC. Find their links and information here.`}
             />
             <div className="container">
                 <div className={projectStyles.projectContainer}>
