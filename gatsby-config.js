@@ -3,6 +3,7 @@ module.exports = {
     title: `FOSS Club GEC`,
     description: `The Official Webapp of The FOSS Club GEC. FOSS Club GEC is a club started by a group of FOSS enthusiasts to nurture the open source Club in Goa College of Engineering and encourage students across Goa to contribute to open source software projects and adopt the FOSS philosophy.`,
     author: `FCGEC`,
+    siteUrl: `https://gecfoss.club`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -101,6 +102,7 @@ module.exports = {
       options: {
         data: `@import "${__dirname}/src/styles/variables";`,
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
   ],
 }
