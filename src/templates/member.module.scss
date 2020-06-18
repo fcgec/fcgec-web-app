@@ -43,8 +43,8 @@
     }
 
     &:hover {
-      color: #727272;
-      box-shadow: 0 0.5rem 0.5rem #000;
+      color: $secondary-bg;
+      box-shadow: 0 0.5rem 0.5rem $shadow;
       transition: all 0.3s ease-in-out;
     }
   }

@@ -96,6 +96,7 @@ const EventsPage = () => {
 					<div className={eventStyles.eventsGrid}>
 						{newEvents.map(event => (
 							<EventCard
+								showAuthor={false}
 								key={event.node.fields.slug}
 								{...event.node}
 								{...event.node.frontmatter}

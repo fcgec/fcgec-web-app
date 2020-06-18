@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import eventCardStyles from './eventCard.module.scss'
 
-const EventCard = ({ frontmatter: { title, date, author },
+const EventCard = ({ showAuthor, frontmatter: { title, date, author },
     fields: { slug }, excerpt }) => {
 
     return (
@@ -11,11 +11,15 @@ const EventCard = ({ frontmatter: { title, date, author },
             <Link to={`/events/${slug}`}>
                 <h4>{title}</h4>
                 <p>{date}</p>
-                <p>By {author}</p>
+                {showAuthor ? <p>By {author}</p> : ""}
                 <p>{excerpt}</p>
             </Link>
         </div>
     )
+}
+
+EventCard.defaultProps = {
+    showAuthor: true
 }
 
 export default EventCard

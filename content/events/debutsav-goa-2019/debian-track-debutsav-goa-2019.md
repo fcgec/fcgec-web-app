@@ -1,7 +1,7 @@
 ---
 title: "Debian Track @ Debutsav Goa 2019"
 date: "2019-08-15"
-author: "Jinnies Rego"
+author: "Whoever writes the report"
 ---
 
 PLACEHOLDER

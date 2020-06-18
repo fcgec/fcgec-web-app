@@ -20,15 +20,15 @@
   button {
     background: $primary-bg;
     color: $primary-text;
-    border: 3px solid #fff;
+    border: 3px solid $light;
     border-radius: 0.25rem;
     padding: 0.3rem 1rem;
     font-weight: 600;
 
     &:hover {
       cursor: pointer;
-      background: #fff;
-      color: #212121;
+      background: $light;
+      color: $secondary-text;
       transition: all 0.3s ease-in-out;
     }
 
