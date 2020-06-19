@@ -12,4 +12,4 @@ Who doesn't love games! Do join and have fun building a game with us.
 
 <br>
 
-[Registration Link](http://github.com/fcgec)
+[Registration Link](/register)

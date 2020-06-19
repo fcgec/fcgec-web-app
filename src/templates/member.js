@@ -44,12 +44,12 @@ const Member = props => {
                 .then(data => setGithubData(data))
                 .catch(error => console.error("Error fetching GitHub Data", error));
         }
-    }, []);
+    }, [github]);
 
     useEffect(function updateImage() {
         if (githubData && !image)
             setImageToRender(githubData.avatar_url);
-    }, [githubData]);
+    }, [githubData, image]);
 
     // console.log(githubData);
 
