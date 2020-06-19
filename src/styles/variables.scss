@@ -7,3 +7,12 @@ $secondary-text: #212121;
 
 $shadow: #000;
 $light: #fff;
+$fail: #fc100d;
+
+.success {
+  color: $accent;
+}
+
+.failed {
+  color: $fail;
+}

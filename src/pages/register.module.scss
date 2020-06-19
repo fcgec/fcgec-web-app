@@ -1,6 +1,26 @@
+.container {
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.privacy {
+  text-align: center;
+}
+
+.message {
+  padding: 0.2rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  // border: 1px solid $primary-text;
+  // background: $primary-text;
+  // box-shadow: 0 1rem 1rem $shadow;
+  border-radius: 0.25rem;
+}
+
 .form {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
 
   div {
     padding: 0.5rem 0;
@@ -12,20 +32,27 @@
     input {
       padding: 0.5rem 1rem;
       border: none;
+      border-radius: 0.2rem;
+      background: $primary-text;
+      display: block;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
 
       &[type="submit"] {
+        font-size: 1.2rem;
+        margin-top: 1rem;
         background: $accent;
-      }
-    }
-  }
-}
+        color: $primary-text;
 
-@media only screen and (max-width: 768px) {
-  .form {
-    div {
-      input {
-        display: block;
-        width: 100%;
+        &:hover {
+          cursor: pointer;
+          background: $primary-text;
+          color: $accent;
+          transition: all 0.3s ease-in-out;
+        }
       }
     }
   }
