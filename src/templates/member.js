@@ -26,10 +26,14 @@ export const query = graphql`
     }
 `
 
+// To check if website begins with https protocol else prepend it
+const checkWebsite = text => (text.startsWith("https://") ? text : `https://${text}`);
+
 const Member = props => {
     const { membersJson: { name, image, github, twitter, website, linkedin }
     } = props.data;
 
+    const websiteToRender = checkWebsite(website);
 
     return (
         <Layout>
@@ -65,7 +69,7 @@ const Member = props => {
                                     <p> LinkedIn</p>
                                 </a> : ``}
 
-                                {website ? <a href={website}
+                                {website ? <a href={websiteToRender}
                                     aria-label={`Link to ${name}'s Website`}>
                                     <WebsiteIcon className={memberStyles.svgColor} />
                                     <p> Website</p>
