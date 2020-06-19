@@ -31,6 +31,8 @@ const RegisterPage = () => {
                 setMessages(response.data.message);
                 setLoading(false);
                 setSuccess(true);
+                setName('');
+                setEmail('');
             })
             .catch(error => {
                 console.error(error);
@@ -58,7 +60,10 @@ const RegisterPage = () => {
                             {`${messages}.`} <br />
                             {(success ? 'We hope to see you soon :)' : 'Please try again :(')}
                         </span>
-                        : ""}
+                        : ""
+                    }
+
+                    {loading ? <span className={registerStyles.message}>Loading...</span> : ""}
 
                     <form onSubmit={submitHandler} className={registerStyles.form}>
 
@@ -84,6 +89,8 @@ const RegisterPage = () => {
                             <input type="Submit"
                                 disabled={loading}
                                 aria-label="Button to submit form"
+                                value={loading ? 'Loading...' : 'Submit'}
+                                readOnly
                             />
                         </div>
                     </form>
