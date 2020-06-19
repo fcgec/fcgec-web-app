@@ -10,11 +10,15 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 
-  img {
-    max-width: 200px;
-    object-fit: contain;
-    border-radius: 1rem;
+  div {
     margin: 0 auto;
+
+    img {
+      max-width: 200px;
+      object-fit: contain;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
   }
 
   h2 {

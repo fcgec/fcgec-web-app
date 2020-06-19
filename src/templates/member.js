@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -25,7 +25,6 @@ export const query = graphql`
         }
     }
 `
-
 // To check if website begins with https protocol else prepend it
 const checkWebsite = text => (text.startsWith("https://") ? text : `https://${text}`);
 
@@ -35,6 +34,25 @@ const Member = props => {
 
     const websiteToRender = checkWebsite(website);
 
+    const [githubData, setGithubData] = useState();
+    const [imageToRender, setImageToRender] = useState(image);
+
+    useEffect(function getGitHubData() {
+        if (github) {
+            fetch(`https://api.github.com/users/${github}`)
+                .then(res => res.json())
+                .then(data => setGithubData(data))
+                .catch(error => console.error("Error fetching GitHub Data", error));
+        }
+    }, []);
+
+    useEffect(function updateImage() {
+        if (githubData && !image)
+            setImageToRender(githubData.avatar_url);
+    }, [githubData]);
+
+    // console.log(githubData);
+
     return (
         <Layout>
             <SEO title={name}
@@ -43,11 +61,22 @@ const Member = props => {
             <div className="container">
                 <div className={memberStyles.memberContainer}>
                     <div className={memberStyles.member}>
-                        {
-                            image ?
-                                <img src={image} alt={name} />
-                                : <UserIcon className={memberStyles.svgProfile} />
-                        }
+                        <div>
+                            {
+                                imageToRender ?
+                                    <img src={imageToRender} alt={name} />
+                                    : <UserIcon className={memberStyles.svgProfile} />
+                            }
+                            {
+                                githubData ?
+                                    <div>
+                                        <p>Public repos: {githubData.public_repos}</p>
+                                        <p>Followers: {githubData.followers}</p>
+                                        <p>Following: {githubData.following}</p>
+                                    </div>
+                                    : ""
+                            }
+                        </div>
                         <div className={memberStyles.info}>
                             <h2>{name}</h2>
                             <div className={memberStyles.links}>
