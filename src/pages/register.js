@@ -11,6 +11,7 @@ import registerStyles from './register.module.scss'
 const RegisterPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [question, setQuestion] = useState('');
     const [messages, setMessages] = useState();
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState();
@@ -23,7 +24,8 @@ const RegisterPage = () => {
             url: 'https://fcgec-events.herokuapp.com/api/register',
             data: {
                 name,
-                email
+                email,
+                question
             }
         })
             .then(response => {
@@ -33,6 +35,7 @@ const RegisterPage = () => {
                 setSuccess(true);
                 setName('');
                 setEmail('');
+                setQuestion('');
             })
             .catch(error => {
                 console.error(error);
@@ -83,6 +86,14 @@ const RegisterPage = () => {
                                 value={email}
                                 required
                                 aria-label="input to take email"
+                            />
+                        </div>
+                        <div>
+                            <p>Mention any areas of game development you've already explored.</p>
+                            <input type="text"
+                                onChange={e => setQuestion(e.target.value)}
+                                value={question}
+                                aria-label="input to take question answer"
                             />
                         </div>
                         <div>
