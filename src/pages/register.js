@@ -47,7 +47,10 @@ const RegisterPage = () => {
 
     return (
         <Layout>
-            <SEO title="Register" />
+            <SEO title="Register"
+                description="Register for the latest event by FOSS Club GEC. 
+                Don't miss out! Click to find out more."
+            />
 
             <section className="pageTitle">
                 <h2>Register</h2>
@@ -55,6 +58,7 @@ const RegisterPage = () => {
 
             <div className="container">
                 <div className={registerStyles.container}>
+                    <h3>Road To Godot Elite</h3>
                     <p className={registerStyles.privacy}>
                         Your data is completely safe with us.
                     </p>

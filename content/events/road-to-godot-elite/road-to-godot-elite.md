@@ -1,10 +1,10 @@
 ---
-title: "FOSS Game Dev"
+title: "Road To Godot Elite"
 date: "2020-06-24"
 author: "Julius Alphonso"
 ---
 
-![Picture of members and audience](./images/foss-game-dev-poster.jpeg)
+![Road To Godot Elite Poster](./images/road-to-godot-elite.jpeg)
 
 <br>
 
@@ -30,7 +30,7 @@ Best part? It's FREE and Open to all.
 
 Download Godot at : https://godotengine.org/download
 
-Resource pack :
+Resource pack : \_\_\_
 
 Good luck, have fun!
 
