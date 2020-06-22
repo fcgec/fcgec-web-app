@@ -22,7 +22,7 @@ Many have wondered about what goes into making such a product. Well here we are 
 
 We'll be covering concepts involved in game development, use of the FOSS game engine - Godot, entity movements, scoring systems and even the AI used by the ghosts.
 
-All you need is Godot, familiarity with vector maths, and some media resources.
+All you need is Godot, familiarity with vector maths, basic programming knowledge and some media resources. You can download godot and the resource pack we'll be using at the links below.
 
 <br>
 
@@ -30,7 +30,7 @@ Best part? It's FREE and Open to all.
 
 Download Godot at : https://godotengine.org/download
 
-Resource pack : \_\_\_
+Resource pack : https://github.com/fcgec/resources/blob/master/game-development/assets.zip
 
 Good luck, have fun!
 
