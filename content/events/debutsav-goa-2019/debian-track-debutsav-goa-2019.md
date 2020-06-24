@@ -1,9 +1,8 @@
 ---
 title: "Debian Track @ Debutsav Goa 2019"
 date: "2019-08-15"
-author: "Whoever writes the report"
+author: "Jinnies Rego"
 ---
 
-PLACEHOLDER
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos architecto, doloremque quibusdam nam nemo tempore deleniti consequatur perferendis temporibus animi velit nesciunt quam recusandae voluptatem aliquam aliquid quas neque.
+REPORT ON DEBUTSAV 2019
+I went for Debutsav 2019 as I thought it would be an awesome opportunity to learn and experience the magic of free and open source software. So I had chosen the Debian track for the event and so in the morning session they were introducing us to Debian how it all started and how is it doing today so as to make sure that we are interested in becoming Debian developers in the future. These sessions were really interesting as it turns it became a two way session because there were people who were contradicting the speakers and trying to debate with them as to how and why Debian is not doing well today. After the lunch break we were shown an interesting way of installing Debian software on a large scale for multiple computers and later on we also talked about the conference and meeting of Debian developers called debconf and how we could organise it in India.The next day I reached late instead of reaching early. I had to reach early since docker was not working  properly on my laptop plus it was an essential part for Debian packaging. As it turns out some senior had installed the snap version of docker on my laptop which made me lag behind the Debian packaging workshop. But luckily there were other Debian developers around who helped and assisted me and I got individual attention from them regarding Debian packaging plus they also had documented the entire process on their website. Overall I enjoyed debutsav and I look forward for attending a workshop like this in the future so that I can grow as a software engineer and also create a network.
