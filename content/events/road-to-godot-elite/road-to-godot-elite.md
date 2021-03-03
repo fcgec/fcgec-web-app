@@ -1,6 +1,6 @@
 ---
 title: "Road To Godot Elite"
-date: "2020-06-24"
+date: "2021-03-06"
 author: "Julius Alphonso"
 ---
 
@@ -12,21 +12,21 @@ author: "Julius Alphonso"
 
 <br>
 
-Be it massive AAA games like COD or Far Cry, gorgeous indies like Celeste, arcade classics like Pacman or many of the wallet defeulers so abundant on the playstore - we've all enjoyed a good video game. They provide immersive and interactive narrative experiences like no other medium.
+Be it massive AAA like COD Cry or arcade classics like pacman, many have wondered about what goes on towards making such a product. Well here we are to turn that spark into a flame. Our very own Julius Alphonso will take you on a tour of Godot engine.
 
 <br>
 
-Many have wondered about what goes into making such a product. Well here we are to turn that spark into a flame. Our very own Julius Alphonso will take you on a tour of the Godot engine. Teaching just how everything in a game is made as he live streams the development of an arcade classic - Pacman.
+We'll be covering concepts involved in game development, use of the FOSS game engine - Godot, entity movements and much more. We will be creating a demo game of pong during the session.  
 
 <br>
 
-We'll be covering concepts involved in game development, use of the FOSS game engine - Godot, entity movements, scoring systems and even the AI used by the ghosts.
-
-All you need is Godot, familiarity with vector maths, basic programming knowledge and some media resources. You can download godot and the resource pack we'll be using at the links below.
+All you need to do to follow along is donwload Godot.
 
 <br>
 
 Best part? It's FREE and Open to all.
+
+<br>
 
 Download Godot at : https://godotengine.org/download
 
