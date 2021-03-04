@@ -29,8 +29,10 @@ Best part? It's FREE and Open to all.
 <br>
 
 Download Godot at : https://godotengine.org/download
+<br>
+Resource Pack: https://docs.godotengine.org/en/2.1/_downloads/pong_assets.zip
+<br>
 Good luck, have fun!
-
 <br>
 
 ### **[Register Now !!](/register)**
