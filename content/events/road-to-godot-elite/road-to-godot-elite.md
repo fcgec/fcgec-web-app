@@ -29,9 +29,6 @@ Best part? It's FREE and Open to all.
 <br>
 
 Download Godot at : https://godotengine.org/download
-
-Resource pack : https://github.com/fcgec/resources/blob/master/game-development/assets.zip
-
 Good luck, have fun!
 
 <br>
