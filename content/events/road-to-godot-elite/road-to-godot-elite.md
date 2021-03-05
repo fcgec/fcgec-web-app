@@ -12,7 +12,7 @@ author: "Julius Alphonso"
 
 <br>
 
-Be it massive AAA like COD Cry or arcade classics like pacman, many have wondered about what goes on towards making such a product. Well here we are to turn that spark into a flame. Our very own Julius Alphonso will take you on a tour of Godot engine.
+Be it massive AAA games like COD, Far Cry or arcade classics like pacman, many have wondered about what goes on towards making such a product. Well here we are to turn that spark into a flame. Our very own Julius Alphonso will take you on a tour of Godot engine.
 
 <br>
 
