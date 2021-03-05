@@ -16,11 +16,11 @@ Be it massive AAA like COD Cry or arcade classics like pacman, many have wondere
 
 <br>
 
-We'll be covering concepts involved in game development, use of the FOSS game engine - Godot, entity movements and much more. We will be creating a demo game of pong during the session.  
+We'll be covering concepts involved in game development, use of the FOSS game engine - Godot, entity movements and much more. We will be creating a demo game of pong during the session.
 
 <br>
 
-All you need to do to follow along is donwload Godot.
+All you need to do to follow along is download Godot.
 
 <br>
 
@@ -28,13 +28,17 @@ Best part? It's FREE and Open to all.
 
 <br>
 
-Download Godot at : https://godotengine.org/download
+Requirements:
 <br>
-Resource Pack: https://docs.godotengine.org/en/2.1/_downloads/pong_assets.zip
+
+- [Godot Download Link](https://godotengine.org/download)
+  <br>
+- [Resource Pack Download Link](https://docs.godotengine.org/en/2.1/_downloads/pong_assets.zip)
+
 <br>
 Good luck, have fun!
 <br>
 
-### **[Register Now !!](/register)**
+### **[Register Now!!](/register)**
 
 <br>
