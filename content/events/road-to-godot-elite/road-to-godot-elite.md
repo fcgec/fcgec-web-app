@@ -41,4 +41,6 @@ Good luck, have fun!
 
 ### **[Register Now!!](/register)**
 
+### **[In case of late registration, here's the Meet link](https://meet.google.com/hgi-cuoe-hfi)**
+
 <br>
