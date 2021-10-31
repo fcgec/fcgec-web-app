@@ -1,5 +1,13 @@
 [
     {
+        "name": "Atharva Ikhar",
+        "image": "https://media-exp1.licdn.com/dms/image/C5103AQE271_5_HJcLw/profile-displayphoto-shrink_400_400/0/1582257425071?e=1640822400&v=beta&t=dF5TfYBRUdWYrp1Ppxb4rZGAGmJgbtUv3jRFfhUfS2s",
+        "github": "iatharva",
+        "twitter": "iatharva_",
+        "website": "https://iatharva.github.io",
+        "linkedin": "iatharva"
+    },
+    {
         "name": "Vipul Chodankar",
         "image": "https://media-exp1.licdn.com/dms/image/C5103AQHm42m3ifltCw/profile-displayphoto-shrink_200_200/0?e=1597881600&v=beta&t=WAlqYKNguwY0qUbouuIMgi7KgOyhlPCEwDi7gxEON5s",
         "github": "vipulchodankar",
@@ -112,11 +120,44 @@
         "linkedin": ""
     },
     {
+
         "name": "Alioune Ba",
         "image": "",
         "github": "https://github.com/seydou91",
         "twitter": "https://twitter.com/seydouba91",
         "website": "",
         "linkedin": "https://www.linkedin.com/in/alioune-ba-b2a19aa3/"
+    },
+    {
+        "name": "Vivek Silimkhan",
+        "image": "",
+        "github": "",
+        "twitter": "",
+        "website": "",
+        "linkedin": "vivek-silimkhan"
+    },
+    {
+        "name": "Fajar Saputro Juliantoro",
+        "image": "https://avatars.githubusercontent.com/u/22906687?s=400&u=a8627bcbbc8cb1a45be531e1bd2303f0d66a55dc&v=4",
+        "github": "fajarsj",
+        "twitter": "",
+        "website": "https://smartpixel.id/",
+        "linkedin": "https://www.linkedin.com/in/fajarsj/"
+    },
+    {
+        "name": "Trilok Vallamkonda",
+        "image": "",
+        "github": "trilok2703",
+        "twitter": "",
+        "website": "",
+        "linkedin": ""
+    },
+    {
+        "name": "zesty",
+        "image": "https://dcassetcdn.com/design_img/805849/192877/192877_4762430_805849_image.jpg",
+        "github": "https://github.com/zestycoder",
+        "twitter": "",
+        "website": "",
+        "linkedin": ""
     }
 ]
